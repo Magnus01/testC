@@ -244,7 +244,7 @@ DockerSandbox.prototype.execute = function(success)
             {
                 console.log("DONE")
                 //check for possible errors
-                fs.readFile(sandbox.path + sandbox.folder + '/errors', 'utf8', function(err2, data2)
+                fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function(err2, data2)
                 {
                     if(!data2) data2=""
                     console.log("Error file: ")
@@ -296,7 +296,7 @@ DockerSandbox.prototype.execute = function(success)
             //now remove the temporary directory
             console.log("ATTEMPTING TO REMOVE: " + sandbox.folder);
             console.log("------------------------------")
-            exec("rm -r " + sandbox.folder);
+            // exec("rm -r " + sandbox.folder);
 
 
             clearInterval(unit_intid);
@@ -397,7 +397,7 @@ DockerSandbox.prototype.execute = function(success)
             //now remove the temporary directory
             console.log("ATTEMPTING TO REMOVE: " + sandbox.folder);
             console.log("------------------------------")
-            exec("rm -r " + sandbox.folder);
+            // exec("rm -r " + sandbox.folder);
 
             
             clearInterval(intid);
