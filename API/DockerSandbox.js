@@ -272,7 +272,7 @@ DockerSandbox.prototype.execute = function(success)
                     console.log("Time: ")
                     console.log(time)
 
-
+                    cnosole.log('our dataa2', our)
                     success(data,time,data2)
                 });
 
@@ -282,23 +282,15 @@ DockerSandbox.prototype.execute = function(success)
             //if time is up. Save an error message to the data variable
             else
             {
-                //Since the time is up, we take the partial output and return it.
-                fs.readFile(sandbox.path + sandbox.folder + '/logfile_unit.txt', 'utf8', function(err, data){
-                    if (!data) data = "";
-                    data += "\nExecution Timed Out";
-                    // console.log("Timed Out: "+sandbox.folder+" "+sandbox.langName)
+
                     fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function(err2, data2)
                     {
-                        if(!data2) data2=""
 
-                        var lines = data.toString().split('*---*')
-                        data=lines[0]
-                        var time=lines[1]
 
                         console.log("this is our data2", data2, 'this is our data 2')
-                        success(data,data2)
+                        success(data2)
                     });
-                });
+
 
             }
 
