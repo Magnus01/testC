@@ -286,7 +286,7 @@ DockerSandbox.prototype.execute = function(success)
                 fs.readFile(sandbox.path + sandbox.folder + '/logfile_unit.txt', 'utf8', function(err, data){
                     if (!data) data = "";
                     data += "\nExecution Timed Out";
-                    console.log("Timed Out: "+sandbox.folder+" "+sandbox.langName)
+                    // console.log("Timed Out: "+sandbox.folder+" "+sandbox.langName)
                     fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function(err2, data2)
                     {
                         if(!data2) data2=""
@@ -295,15 +295,11 @@ DockerSandbox.prototype.execute = function(success)
                         data=lines[0]
                         var time=lines[1]
 
-                        console.log("Time: ")
-                        console.log(time)
 
-                        console.log(data, 'data')
-                        console.log(data2, 'data2')
                         success(data,data2)
                     });
                 });
-
+Z
             }
 
 
