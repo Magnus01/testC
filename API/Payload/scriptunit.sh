@@ -45,14 +45,14 @@ exec  2> $"/usercode/errors_unit"
 START=$(date +%s.%2N)
 #Branch 1
 if [ "$output" = "" ]; then
-    $compiler /usercode/$file -< $"/usercode/unit_test" #| tee /usercode/outputUnit.txt
+    $compiler /usercode/$file -< $"/usercode/unit_test.py" #| tee /usercode/outputUnit.txt
 #Branch 2
 else
 	#In case of compile errors, redirect them to a file
         $compiler /usercode/$file $addtionalArg #&> /usercode/errors_unit.txt
 	#Branch 2a
 	if [ $? -eq 0 ];	then
-		$output -< $"/usercode/unit_test" #| tee /usercode/outputUnit.txt
+		$output -< $"/usercode/unit_test.py" #| tee /usercode/outputUnit.txt
 	#Branch 2b
 	else
 	    echo "Compilation Failed"
