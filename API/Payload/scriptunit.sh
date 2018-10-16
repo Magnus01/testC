@@ -52,9 +52,6 @@ echo $compiler /usercode/$file
 
 #head -100 /usercode/logfile_unit.txt
 #touch /usercode/completed_unit
-mv /usercode/errors_unit.txt /usercode/completed_unit
-
-
 END=$(date +%s.%2N)
 runtime=$(echo "$END - $START" | bc)
 
@@ -62,4 +59,5 @@ runtime=$(echo "$END - $START" | bc)
 echo "*-COMPILEBOX::ENDOFOUTPUT-*" $runtime 
 
 
+mv /usercode/errors_unit.txt /usercode/completed_unit
 
