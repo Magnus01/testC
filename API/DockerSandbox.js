@@ -297,7 +297,6 @@ DockerSandbox.prototype.execute = function(success)
 
                         console.log("Time: ")
                         console.log(time)
-                        alert(data, 'data')
                         console.log(data, 'this is data')
                         console.log(data2, 'this is data2')
                         success(data,data2)
