@@ -306,7 +306,7 @@ DockerSandbox.prototype.execute = function(success)
             //now remove the temporary directory
             console.log("ATTEMPTING TO REMOVE: " + sandbox.folder);
             console.log("------------------------------")
-            // exec("rm -r " + sandbox.folder);
+             exec("rm -r " + sandbox.folder);
 
 
             clearInterval(unit_intid);
