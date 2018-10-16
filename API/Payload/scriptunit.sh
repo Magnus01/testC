@@ -46,7 +46,7 @@ exec  2> $"/usercode/errors_unit"
 
 START=$(date +%s.%2N)
 $compiler /usercode/$file $addtionalArg #&> /usercode/errors_unit.txt
-
+echo $compiler /usercode/$file
 
 #exec 1>&3 2>&4
 
