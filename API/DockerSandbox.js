@@ -127,7 +127,7 @@ DockerSandbox.prototype.prepare = function(success)
             
         });
 
-    exec("mkdir "+ this.path+this.folder + " && cp "+this.path+"/Payload/* "+this.path+this.folder+"&& chmod 777 "+ this.path+this.folder,function(st)
+    exec("mkdir "+ this.path+this.folder + " && cp "+this.path+"/Payload/* "+this.path+this.folder+"&& chmod 777 "+ this.path+this.folder,function(st_unit)
     {
         fs.writeFile(
             sandbox.path +
