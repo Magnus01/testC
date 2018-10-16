@@ -69,21 +69,39 @@ app.post('/compile',bruteforce.prevent,function(req, res)
         path,
         folder,
         vm_name,
+        //  COMPILER NAME
         arr.compilerArray[language][0],
 
-
-
+//  file_name,
+//         python
         arr.compilerArray[language][1],
 
-
-
+        // code,
         code,
+
+        // unit_test
         unit_test,
+
+        // output_command,
+            // BLANK
         arr.compilerArray[language][2],
+
+        // languageName,
+        // Python
         arr.compilerArray[language][3],
+
+        // e_arguments,
+        //blank
         arr.compilerArray[language][4],
-        arr.compilerArray[language][5],
-        stdin);
+
+        // stdin_data,
+        stdin,
+
+
+        // unit_file_name
+        // unit_test.py
+        arr.compilerArray[language][5]
+       );
 
 
 
