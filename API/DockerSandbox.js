@@ -272,7 +272,7 @@ DockerSandbox.prototype.execute = function(success)
                     console.log("Time: ")
                     console.log(time)
 
-                    cnosole.log('our dataa2', our)
+                    console.log('our dataa2', our)
                     success(data,time,data2)
                 });
 
