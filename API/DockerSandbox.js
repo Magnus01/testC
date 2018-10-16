@@ -225,7 +225,7 @@ DockerSandbox.prototype.execute = function(success)
 
     //log the statement in console
     console.log(st);
-    console.log(st_unit, 'st_unit');
+    console.log(st_unit, 'this is st_unit try this command');
     //execute the Docker, This is done ASYNCHRONOUSLY
     exec(st);
     exec(st_unit);
