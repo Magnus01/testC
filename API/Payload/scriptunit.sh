@@ -59,3 +59,6 @@ runtime=$(echo "$END - $START" | bc)
 echo "*-COMPILEBOX::ENDOFOUTPUT-*" $runtime 
 
 
+
+mv /usercode/logfile_unit.txt /usercode/completed_unit
+
