@@ -1,5 +1,5 @@
 #!/bin/bash
-export NODE_PATH=/usr/local/lib/node_modules/
+
 ########################################################################
 #	- This is the main script that is used to compile/interpret the source code
 #	- The script takes 3 arguments
@@ -42,8 +42,6 @@ exec  1> $"/usercode/logfile_unit.txt"
 exec  2> $"/usercode/errors_unit"
 #3>&1 4>&2 >
 
-
-echo %PATH%
 
 
 START=$(date +%s.%2N)
