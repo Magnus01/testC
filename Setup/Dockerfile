@@ -23,7 +23,7 @@ RUN apt-get install -y npm
 RUN apt-get install -y golang-go	
 RUN apt-get install -y nodejs
 
-RUN npm install -g underscore request express jade shelljs passport http sys jquery lodash async mocha moment connect validator restify ejs ws co when helmet wrench brain mustache should backbone forever  debug && export NODE_PATH=/usr/local/lib/node_modules/
+sudo RUN npm install -g underscore request express jade shelljs passport http sys jquery lodash async mocha moment connect validator restify ejs ws co when helmet wrench brain mustache should backbone forever  debug && export NODE_PATH=/usr/local/lib/node_modules/
 
 RUN apt-get install -y clojure1.4
 
