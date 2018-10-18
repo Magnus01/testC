@@ -32,7 +32,6 @@ RUN /usr/sbin/adduser nonroot sudo
 RUN chown -R nonroot /usr/local/
 RUN chown -R nonroot /usr/lib/
 RUN chown -R nonroot /usr/bin/
-RUN chown -R nonroot /src
 
 USER nonroot
 
