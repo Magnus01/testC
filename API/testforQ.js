@@ -1,5 +1,5 @@
 if (typeof QUnit == 'undefined') // if your tests also run in the browser...
-    QUnit = require('qunit-cli');
+    QUnit = require('qunit');
 
 // use QUnit as you normally would.
 
