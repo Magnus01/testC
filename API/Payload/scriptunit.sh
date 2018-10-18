@@ -45,6 +45,7 @@ exec  2> $"/usercode/errors_unit"
 
 
 START=$(date +%s.%2N)
+sudo bash nodejs npm install qunit
 qunit /usercode/$file $addtionalArg #&> /usercode/errors_unit.txt
 echo $compiler /usercode/$file
 
