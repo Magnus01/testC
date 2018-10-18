@@ -1,5 +1,5 @@
 #!/bin/bash
-
+export NODE_PATH=/usr/local/lib/node_modules/
 ########################################################################
 #	- This is the main script that is used to compile/interpret the source code
 #	- The script takes 3 arguments
