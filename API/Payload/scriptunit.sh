@@ -43,6 +43,8 @@ exec  2> $"/usercode/errors_unit"
 #3>&1 4>&2 >
 
 
+echo %PATH%
+
 
 START=$(date +%s.%2N)
 $compiler /usercode/$file $addtionalArg #&> /usercode/errors_unit.txt
