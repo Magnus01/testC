@@ -5,6 +5,7 @@
   "dependencies": {
     "express": "4.*",
     "body-parser": "*",
+
     "express-brute": "*",
     "exports": "*"
   },
