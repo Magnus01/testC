@@ -23,7 +23,21 @@ RUN apt-get install -y npm
 RUN apt-get install -y golang-go	
 RUN apt-get install -y nodejs
 
-sudo RUN npm install -g underscore request express jade shelljs passport http sys jquery lodash async mocha moment connect validator restify ejs ws co when helmet wrench brain mustache should backbone forever  debug && export NODE_PATH=/usr/local/lib/node_modules/
+
+
+
+# Create a nonroot user, and switch to it
+RUN /usr/sbin/useradd --create-home --home-dir /usr/local/nonroot --shell /bin/bash nonroot
+RUN /usr/sbin/adduser nonroot sudo
+RUN chown -R nonroot /usr/local/
+RUN chown -R nonroot /usr/lib/
+RUN chown -R nonroot /usr/bin/
+RUN chown -R nonroot /src
+
+USER nonroot
+
+RUN npm cache clean
+RUN npm install -g underscore request express jade shelljs passport http sys jquery lodash async mocha moment connect validator restify ejs ws co when helmet wrench brain mustache should backbone forever  debug && export NODE_PATH=/usr/local/lib/node_modules/
 
 RUN apt-get install -y clojure1.4
 
