@@ -1,3 +1,8 @@
+if (typeof QUnit == 'undefined') // if your tests also run in the browser...
+    QUnit = require('qunit-cli');
+
+// use QUnit as you normally would.
+
 var add = function(a, b) {
     return a + b;
 };
