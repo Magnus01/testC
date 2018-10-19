@@ -1,5 +1,4 @@
-#!/usr/bin/env sh
-
+#!/bin/bash
 
 ########################################################################
 #	- This is the main script that is used to compile/interpret the source code
