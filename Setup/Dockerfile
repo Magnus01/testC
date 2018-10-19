@@ -37,8 +37,8 @@ RUN apt-get install -y nodejs
 #
 #RUN npm cache clean
 
-RUN npm -g config set user root
-RUN npm -g install nodegit
+RUN npm config set user root
+RUN npm install nodegit
 
 RUN npm install underscore  request express jade shelljs passport http sys jquery lodash async mocha qunit moment connect validator restify ejs ws co when helmet wrench brain mustache should backbone forever  debug && export NODE_PATH=/usr/local/lib/node_modules/
 
