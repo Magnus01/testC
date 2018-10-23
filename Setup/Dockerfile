@@ -19,8 +19,9 @@ RUN apt-get install -y python
 RUN apt-get install -y mono-xsp2 mono-xsp2-base
 
 RUN apt-get install -y mono-vbnc
+RUN apt-get install curl
 
-RUN curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+RUN curl -sL https://deb.nodesource.com/setup_7.x | -E bash -
 
 RUN apt-get install -y npm
 RUN apt-get install -y golang-go
