@@ -19,8 +19,8 @@ RUN apt-get install -y python
 RUN apt-get install -y mono-xsp2 mono-xsp2-base
 
 RUN apt-get install -y mono-vbnc
-RUN apt-get install curl
 
+RUN apt-get install curl -y
 RUN curl -sL https://deb.nodesource.com/setup_7.x | -E bash -
 
 RUN apt-get install -y npm
