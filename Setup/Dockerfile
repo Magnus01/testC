@@ -22,7 +22,7 @@ RUN apt-get install -y mono-vbnc
 
 RUN apt-get install curl -y
 RUN apt-get install -y sudo -y
-RUN apt-get install build-essential libssl-dev
+RUN apt-get install build-essential libssl-dev -y
 RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.16.1/install.sh | sh
 
 
