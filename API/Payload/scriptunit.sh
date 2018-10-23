@@ -16,7 +16,7 @@ file=$2
 output=$3
 addtionalArg=$4
 
-ln -s /usr/bin/nodejs /usr/bin/node
+
 ########################################################################
 #	- The script works as follows
 #	- It first stores the stdout and std err to another stream
