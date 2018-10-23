@@ -24,7 +24,7 @@ RUN apt-get install -y golang-go
 RUN apt-get install -y nodejs
 
 
-
+RUN ln -s "$(which nodejs)" /usr/local/bin/node
 #
 ### Create a nonroot user, and switch to it
 ##RUN /usr/sbin/useradd --create-home --home-dir /usr/local/nonroot --shell /bin/bash nonroot
