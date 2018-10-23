@@ -19,11 +19,17 @@ RUN apt-get install -y python
 RUN apt-get install -y mono-xsp2 mono-xsp2-base
 
 RUN apt-get install -y mono-vbnc
+
+RUN curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+
 RUN apt-get install -y npm
-RUN apt-get install -y golang-go	
+RUN apt-get install -y golang-go
+
+
+
 RUN apt-get install -y nodejs
 
-
+RUN apt-get install build-essential
 RUN ln -s "$(which nodejs)" /usr/local/bin/node
 #
 ### Create a nonroot user, and switch to it
