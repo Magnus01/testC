@@ -234,54 +234,104 @@ DockerSandbox.prototype.execute = function(success)
 
 
 
+    if (this.compiler_name = "mocha") {
+        // FOR UNIT TEST INTID
+        var unit_intid = setInterval(function () {
+            //Displaying the checking message after 1 second interval, testing purposes only
+            //console.log("Checking " + sandbox.path+sandbox.folder + ": for completion: " + myC);
 
-    // FOR UNIT TEST INTID
-    var unit_intid = setInterval(function()
-    {
-        //Displaying the checking message after 1 second interval, testing purposes only
-        //console.log("Checking " + sandbox.path+sandbox.folder + ": for completion: " + myC);
+            unit_myC = unit_myC + 1;
 
-        unit_myC = unit_myC + 1;
+            fs.readFile(sandbox.path + sandbox.folder + '/logfile_unit', 'utf8', function (err, data) {
 
-        fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function(err, data) {
-
-            //if file is not available yet and the file interval is not yet up carry on
-            if (err && unit_myC < sandbox.timeout_value)
-            {
-                //console.log(err);
-                return;
-            }
-            //if file is found simply display a message and proceed
-            else if (unit_myC < sandbox.timeout_value)
-            {
-                console.log("DONE")
-                //check for possible errors
-                if (compiler_name = "mocha") {
-                fs.readFile(sandbox.path + sandbox.folder + '/logfile_unit', 'utf8', function(err2, data2)
-                {
-                    if(!data2) data2=""
-                    console.log("Error file: ")
-                    console.log(data2)
-
-                    console.log("Main File")
-                    console.log(data)
-
-                    var lines = data.toString().split('*-COMPILEBOX::ENDOFOUTPUT-*')
-                    data=lines[0]
-                    var time=lines[1]
-
-                    console.log("Time: ")
-                    console.log(time)
-
-                    console.log('our dataa2', data2)
-                    success(data2)
-                    // success(data,time,data2)
-                });
+                //if file is not available yet and the file interval is not yet up carry on
+                if (err && unit_myC < sandbox.timeout_value) {
+                    //console.log(err);
+                    return;
                 }
+                //if file is found simply display a message and proceed
+                else if (unit_myC < sandbox.timeout_value) {
+                    console.log("DONE MOCHA")
+                    //check for possible errors
+
+                    fs.readFile(sandbox.path + sandbox.folder + '/logfile_unit', 'utf8', function (err2, data2) {
+                        if (!data2) data2 = ""
+                        console.log("MOCHA Error file: ")
+                        console.log(data2)
+
+                        console.log("Main File")
+                        console.log(data)
+
+                        var lines = data.toString().split('*-COMPILEBOX::ENDOFOUTPUT-*')
+                        data = lines[0]
+                        var time = lines[1]
+
+                        console.log("Time: ")
+                        console.log(time)
+
+                        console.log('our dataa MOCHA 2', data2)
+                        success(data2)
+                        // success(data,time,data2)
+                    });
+
+                    //return the data to the calling functoin
+
+                }
+                //if time is up. Save an error message to the data variable
                 else {
-                    fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function(err2, data2)
-                    {
-                        if(!data2) data2=""
+                    //Since the time is up, we take the partial output and return it.
+                    fs.readFile(sandbox.path + sandbox.folder + '/logfile_unit.txt', 'utf8', function (err, data) {
+                        if (!data) data = "";
+                        data += "\nExecution Timed Out";
+                        // console.log("Timed Out: "+sandbox.folder+" "+sandbox.langName)
+                        fs.readFile(sandbox.path + sandbox.folder + '/logfile_unit', 'utf8', function (err2, data2) {
+                            if (!data2) data2 = ""
+
+                            var lines = data.toString().split('*---*')
+                            data = lines[0]
+                            var time = lines[1]
+
+                            console.log("this is our data2 MOCHA", data2, 'this is our data 2 MOCHA time up')
+                            success(data, data2)
+                        });
+                    });
+
+                }
+
+
+                //now remove the temporary directory
+                console.log("ATTEMPTING TO REMOVE: " + sandbox.folder);
+                console.log("------------------------------")
+                // exec("rm -r " + sandbox.folder);
+
+                clearInterval(unit_intid);
+            });
+        }, 1000);
+
+
+    }
+    else  {
+        // FOR UNIT TEST INTID
+        var unit_intid = setInterval(function () {
+            //Displaying the checking message after 1 second interval, testing purposes only
+            //console.log("Checking " + sandbox.path+sandbox.folder + ": for completion: " + myC);
+
+            unit_myC = unit_myC + 1;
+
+            fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err, data) {
+
+                //if file is not available yet and the file interval is not yet up carry on
+                if (err && unit_myC < sandbox.timeout_value) {
+                    //console.log(err);
+                    return;
+                }
+                //if file is found simply display a message and proceed
+                else if (unit_myC < sandbox.timeout_value) {
+                    console.log("DONE")
+                    //check for possible errors
+
+                    fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err2, data2) {
+                        if (!data2) data2 = ""
                         console.log("Error file: ")
                         console.log(data2)
 
@@ -289,8 +339,8 @@ DockerSandbox.prototype.execute = function(success)
                         console.log(data)
 
                         var lines = data.toString().split('*-COMPILEBOX::ENDOFOUTPUT-*')
-                        data=lines[0]
-                        var time=lines[1]
+                        data = lines[0]
+                        var time = lines[1]
 
                         console.log("Time: ")
                         console.log(time)
@@ -299,45 +349,42 @@ DockerSandbox.prototype.execute = function(success)
                         success(data2)
                         // success(data,time,data2)
                     });
+
+                    //return the data to the calling functoin
+
                 }
-                //return the data to the calling function
+                //if time is up. Save an error message to the data variable
+                else {
+                    //Since the time is up, we take the partial output and return it.
+                    fs.readFile(sandbox.path + sandbox.folder + '/errors_unit.txt', 'utf8', function (err, data) {
+                        if (!data) data = "";
+                        data += "\nExecution Timed Out";
+                        // console.log("Timed Out: "+sandbox.folder+" "+sandbox.langName)
+                        fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err2, data2) {
+                            if (!data2) data2 = ""
 
-            }
-            //if time is up. Save an error message to the data variable
-            else
-            {
-                //Since the time is up, we take the partial output and return it.
-                fs.readFile(sandbox.path + sandbox.folder + '/errors_unit.txt', 'utf8', function(err, data){
-                    if (!data) data = "";
-                    data += "\nExecution Timed Out";
-                    // console.log("Timed Out: "+sandbox.folder+" "+sandbox.langName)
-                    fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function(err2, data2)
-                    {
-                        if(!data2) data2=""
+                            var lines = data.toString().split('*---*')
+                            data = lines[0]
+                            var time = lines[1]
 
-                        var lines = data.toString().split('*---*')
-                        data=lines[0]
-                        var time=lines[1]
-
-                        console.log("this is our data2", data2, 'this is our data 2')
-                        success(data,data2)
+                            console.log("this is our data2", data2, 'this is our data 2')
+                            success(data, data2)
+                        });
                     });
-                });
 
-            }
-
-
-            //now remove the temporary directory
-            console.log("ATTEMPTING TO REMOVE: " + sandbox.folder);
-            console.log("------------------------------")
-             // exec("rm -r " + sandbox.folder);
-
-            clearInterval(unit_intid);
-        });
-    }, 1000);
+                }
 
 
+                //now remove the temporary directory
+                console.log("ATTEMPTING TO REMOVE: " + sandbox.folder);
+                console.log("------------------------------")
+                // exec("rm -r " + sandbox.folder);
 
+                clearInterval(unit_intid);
+            });
+        }, 1000);
+
+    }
 
 };
 
