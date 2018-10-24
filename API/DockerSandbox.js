@@ -256,6 +256,7 @@ DockerSandbox.prototype.execute = function(success)
             {
                 console.log("DONE")
                 //check for possible errors
+                if (compiler_name = "mocha") {
                 fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function(err2, data2)
                 {
                     if(!data2) data2=""
@@ -276,8 +277,30 @@ DockerSandbox.prototype.execute = function(success)
                     success(data2)
                     // success(data,time,data2)
                 });
+                }
+                else {
+                    fs.readFile(sandbox.path + sandbox.folder + '/logfile_unit', 'utf8', function(err2, data2)
+                    {
+                        if(!data2) data2=""
+                        console.log("Error file: ")
+                        console.log(data2)
 
-                //return the data to the calling functoin
+                        console.log("Main File")
+                        console.log(data)
+
+                        var lines = data.toString().split('*-COMPILEBOX::ENDOFOUTPUT-*')
+                        data=lines[0]
+                        var time=lines[1]
+
+                        console.log("Time: ")
+                        console.log(time)
+
+                        console.log('our dataa2', data2)
+                        success(data2)
+                        // success(data,time,data2)
+                    });
+                }
+                //return the data to the calling function
 
             }
             //if time is up. Save an error message to the data variable
