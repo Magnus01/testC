@@ -232,12 +232,12 @@ DockerSandbox.prototype.execute = function(success)
     console.log("------------------------------")
     //Check For File named "completed" after every 1 second
 
-    console.log(this.compiler_name, "our compiiler name should be mocha");
-    if (this.compiler_name === "mocha")
+    console.log(this.compiler_name, "our compiiler name should be qunit");
+    if (this.compiler_name === "qunit")
     {
-        console.log('this is the truth about mocha')
+        console.log('this is the truth about qunit')
     }
-    if (this.compiler_name === "mocha") {
+    if (this.compiler_name === "qunit") {
         // FOR UNIT TEST INTID
         var unit_intid = setInterval(function () {
             //Displaying the checking message after 1 second interval, testing purposes only
