@@ -257,7 +257,7 @@ DockerSandbox.prototype.execute = function(success)
                 console.log("DONE")
                 //check for possible errors
                 if (compiler_name = "mocha") {
-                fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function(err2, data2)
+                fs.readFile(sandbox.path + sandbox.folder + '/logfile_unit', 'utf8', function(err2, data2)
                 {
                     if(!data2) data2=""
                     console.log("Error file: ")
@@ -279,7 +279,7 @@ DockerSandbox.prototype.execute = function(success)
                 });
                 }
                 else {
-                    fs.readFile(sandbox.path + sandbox.folder + '/logfile_unit', 'utf8', function(err2, data2)
+                    fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function(err2, data2)
                     {
                         if(!data2) data2=""
                         console.log("Error file: ")
