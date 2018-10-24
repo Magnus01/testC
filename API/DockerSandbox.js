@@ -233,7 +233,10 @@ DockerSandbox.prototype.execute = function(success)
     //Check For File named "completed" after every 1 second
 
     console.log(this.compiler_name, "our compiiler name should be mocha");
-
+    if (this.compiler_name === "mocha")
+    {
+        console.log('this is the truth about mocha')
+    }
     if (this.compiler_name === "mocha") {
         // FOR UNIT TEST INTID
         var unit_intid = setInterval(function () {
