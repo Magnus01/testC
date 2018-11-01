@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8cd49dfa-560e-4cfe-a8b1-958391910d06" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/API/Payload/scriptunit.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Payload/scriptunit.sh" beforeDir="false" afterPath="$PROJECT_DIR$/API/Payload/scriptunit.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,8 +46,8 @@
       <file leaf-file-name="scriptunit.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/Payload/scriptunit.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
+            <state relative-caret-position="174">
+              <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -398,12 +398,12 @@
       <updated>1540488208449</updated>
       <workItem from="1540488209809" duration="615000" />
       <workItem from="1540818193341" duration="717000" />
-      <workItem from="1541076608004" duration="18139000" />
+      <workItem from="1541076608004" duration="18285000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19471000" />
+    <option name="totallyTimeSpent" value="19617000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -414,8 +414,8 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.2837407" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1076759" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.2837407" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1076759" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -515,8 +515,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API/Payload/scriptunit.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
+        <state relative-caret-position="174">
+          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
         </state>
       </provider>
     </entry>
