@@ -324,7 +324,7 @@ DockerSandbox.prototype.execute = function(success)
                 });
             }
             else {
-                console.log(err);
+
                 console.log('if file is not available yet and the file interval is not yet up carry on')
                 return;
             }
