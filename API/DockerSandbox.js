@@ -245,7 +245,7 @@ DockerSandbox.prototype.execute = function(success)
 
             unit_myC = unit_myC + 1;
 
-            fs.readFile(sandbox.path + sandbox.folder + '/logfile_unit.txt', 'utf8', function (err, data) {
+            fs.readFile(sandbox.path + sandbox.folder + '/errors_unit.txt', 'utf8', function (err, data) {
 
                 //if file is not available yet and the file interval is not yet up carry on
                 if (err && unit_myC < sandbox.timeout_value) {
@@ -257,7 +257,7 @@ DockerSandbox.prototype.execute = function(success)
                     console.log("DONE MOCHA")
                     //check for possible errors
 
-                    fs.readFile(sandbox.path + sandbox.folder + '/logfile_unit.txt', 'utf8', function (err2, data2) {
+                    fs.readFile(sandbox.path + sandbox.folder + '/errors_unit.txt', 'utf8', function (err2, data2) {
                         if (!data2) data2 = ""
                         console.log("MOCHA Error file: ")
                         console.log(data2)
@@ -283,11 +283,11 @@ DockerSandbox.prototype.execute = function(success)
                 //if time is up. Save an error message to the data variable
                 else {
                     //Since the time is up, we take the partial output and return it.
-                    fs.readFile(sandbox.path + sandbox.folder + '/logfile_unit.txt', 'utf8', function (err, data) {
+                    fs.readFile(sandbox.path + sandbox.folder + '/errors_unit.txt', 'utf8', function (err, data) {
                         if (!data) data = "";
                         data += "\nExecution Timed Out";
                         // console.log("Timed Out: "+sandbox.folder+" "+sandbox.langName)
-                        fs.readFile(sandbox.path + sandbox.folder + '/logfile_unit', 'utf8', function (err2, data2) {
+                        fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err2, data2) {
                             if (!data2) data2 = ""
 
                             var lines = data.toString().split('*---*')
