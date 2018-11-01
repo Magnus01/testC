@@ -256,7 +256,7 @@ DockerSandbox.prototype.execute = function(success)
                 fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err, data) {
 
                     //if file is not available yet and the file interval is not yet up carry on
-                    console.log(data, 'in first readfile');
+                    // console.log(data, 'in first readfile');
                     if (err && unit_myC < sandbox.timeout_value) {
                         console.log(err);
                         console.log('if file is not available yet and the file interval is not yet up carry on')
@@ -265,6 +265,7 @@ DockerSandbox.prototype.execute = function(success)
                     //if file is found simply display a message and proceed
                     else if (!err && unit_myC < sandbox.timeout_value) {
 
+                        success(data)
                         //
                         // console.log(hardcodedpath, 'hardcodedpath');
                         //
@@ -272,25 +273,25 @@ DockerSandbox.prototype.execute = function(success)
                         // console.log(realpath, 'realpath');
                         // console.log(fs.readFileSync(realpath, 'utf8'), 'READ FILE SYNC');
 
-                        fs.readFileSync(realpath, 'utf8', function (err2, data2) {
-                            // if (!data2) data2 = ""
-                            // console.log("Error file: ")
-                            // console.log(data2)
-                            //
-                            // console.log("Main File")
-                            // console.log(data)
-                            //
-                            // var lines = data.toString().split('*-COMPILEBOX::ENDOFOUTPUT-*')
-                            // data = lines[0]
-                            // var time = lines[1]
-                            //
-                            // console.log("Time: ")
-                            // console.log(time)
-                            //
-                            // console.log('our dataa2', data2)
-                            success(data2, data2)
-                            // success(data,time,data2)
-                        });
+                        // fs.readFileSync(realpath, 'utf8', function (err2, data2) {
+                        //     // if (!data2) data2 = ""
+                        //     // console.log("Error file: ")
+                        //     // console.log(data2)
+                        //     //
+                        //     // console.log("Main File")
+                        //     // console.log(data)
+                        //     //
+                        //     // var lines = data.toString().split('*-COMPILEBOX::ENDOFOUTPUT-*')
+                        //     // data = lines[0]
+                        //     // var time = lines[1]
+                        //     //
+                        //     // console.log("Time: ")
+                        //     // console.log(time)
+                        //     //
+                        //     // console.log('our dataa2', data2)
+                        //     success(data2, data2)
+                        //     // success(data,time,data2)
+                        // });
 
                         //return the data to the calling functoin
 

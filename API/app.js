@@ -110,7 +110,7 @@ app.post('/compile',bruteforce.prevent,function(req, res)
     //the result maybe normal program output, list of error messages or a Timeout error
     sandboxType.run(function(data,exec_time,err)
     {
-        //console.log("Data: received: "+ data)
+        console.log("Data: received: "+ data,exec_time,err)
     	res.send({output:data, langid: language,code:code, unit_test:unit_test, errors:err, time:exec_time});
     });
    
