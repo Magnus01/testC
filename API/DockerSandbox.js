@@ -236,19 +236,12 @@ DockerSandbox.prototype.execute = function(success)
     console.log(this.compiler_name, "our compiiler name should be mocha");
 
         // FOR UNIT TEST INTID
-        var unit_intid = setTimeout(function () {
+        var unit_intid = setInterval(function () {
             //Displaying the checking message after 1 second interval, testing purposes only
             //console.log("Checking " + sandbox.path+sandbox.folder + ": for completion: " + myC);
 
             unit_myC = unit_myC + 1;
-            var realpath = sandbox.path + sandbox.folder + '/errors_unit';
-            var hardcodedpath = '/home/ceo/.vnc/testC/API/temp/fa993ec46959b3127c9e/errors_unit';
 
-            console.log(hardcodedpath, 'hardcodedpath');
-
-            console.log( fs.readFileSync(hardcodedpath, 'utf8'), 'READ FILE SYNC');
-            console.log(realpath, 'realpath');
-            console.log( fs.readFileSync(realpath, 'utf8'), 'READ FILE SYNC');
             fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err, data) {
 
                 //if file is not available yet and the file interval is not yet up carry on
