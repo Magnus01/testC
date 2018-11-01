@@ -247,11 +247,12 @@ DockerSandbox.prototype.execute = function(success)
                 //if file is not available yet and the file interval is not yet up carry on
                 console.log(data, 'in first readfile');
                 if (err && unit_myC < sandbox.timeout_value) {
-                    //console.log(err);
+                    console.log(err);
+                    console.log('if file is not available yet and the file interval is not yet up carry on')
                     return;
                 }
                 //if file is found simply display a message and proceed
-                else if (unit_myC < sandbox.timeout_value) {
+                else if (!err && unit_myC < sandbox.timeout_value) {
 
                     var realpath = sandbox.path + sandbox.folder + '/errors_unit';
                     var hardcodedpath = '/home/ceo/.vnc/testC/API/temp/fa993ec46959b3127c9e/errors_unit';
