@@ -42,7 +42,7 @@ exec  0> $"/usercode/errors_unit"
 
 exec  1> $"/usercode/errors_unit"
 
-exec  2> $"/usercode/errors_unit.txt"
+exec  2> $"/usercode/errors_unit"
 
 
 START=$(date +%s.%2N)

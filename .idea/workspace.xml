@@ -46,8 +46,17 @@
       <file leaf-file-name="scriptunit.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/Payload/scriptunit.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="44" column="36" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
+            <state relative-caret-position="335">
+              <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="script.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/Payload/script.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="30" column="44" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="30" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -80,11 +89,6 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/package.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file leaf-file-name="package-lock.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/package-lock.json">
           <provider selected="true" editor-type-id="text-editor" />
@@ -97,13 +101,13 @@
       <find>myc</find>
       <find>errors_unit</find>
       <find>execute</find>
-      <find>log</find>
       <find>mocha</find>
       <find>unit_intid</find>
       <find>st_unit</find>
       <find>readFile</find>
       <find>langName</find>
       <find>unit_file_name</find>
+      <find>log</find>
     </findStrings>
     <replaceStrings>
       <replace>errors_unit</replace>
@@ -340,6 +344,12 @@
             <path>
               <item name="compilebox" type="b2602c69:ProjectViewProjectNode" />
               <item name="compilebox" type="462c0819:PsiDirectoryNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="Payload" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="compilebox" type="b2602c69:ProjectViewProjectNode" />
+              <item name="compilebox" type="462c0819:PsiDirectoryNode" />
               <item name="Setup" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -380,12 +390,12 @@
       <updated>1540488208449</updated>
       <workItem from="1540488209809" duration="615000" />
       <workItem from="1540818193341" duration="717000" />
-      <workItem from="1541076608004" duration="9906000" />
+      <workItem from="1541076608004" duration="9942000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11238000" />
+    <option name="totallyTimeSpent" value="11274000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -396,8 +406,8 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32943678" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1076759" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32943678" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1076759" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -435,13 +445,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/Payload/script.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="30" column="44" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="30" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -495,10 +498,17 @@
     <entry file="file://$PROJECT_DIR$/API/DockerTimeout.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/API/Payload/script.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="30" column="44" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="30" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/API/Payload/scriptunit.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="44" column="36" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
+        <state relative-caret-position="335">
+          <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
         </state>
       </provider>
     </entry>
