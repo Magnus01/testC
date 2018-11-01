@@ -207,7 +207,11 @@ DockerSandbox.prototype.execute = function(success)
     //     ' ' + this.output_command+ ' '
     //     + this.extra_arguments;
 
-
+    function getFilesizeInBytes(filename) {
+        var stats = fs.statSync(filename)
+        var fileSizeInBytes = stats["size"]
+        return fileSizeInBytes
+    }
 
     // The second field is the path where the file or directory are mounted in the container.
     //this statement is what is executed
@@ -243,11 +247,7 @@ DockerSandbox.prototype.execute = function(success)
             var hardcodedpath = '/home/ceo/.vnc/testC/API/temp/fa993ec46959b3127c9e/errors_unit';
             unit_myC = unit_myC + 1;
 
-            function getFilesizeInBytes(filename) {
-                var stats = fs.statSync(filename)
-                var fileSizeInBytes = stats["size"]
-                return fileSizeInBytes
-            }
+
 
             console.log(getFilesizeInBytes(realpath), 'filesize');
             if (fs.existsSync(realpath)) {
@@ -314,13 +314,14 @@ DockerSandbox.prototype.execute = function(success)
                 console.log("------------------------------")
                 // exec("rm -r " + sandbox.folder);
 
-                clearInterval(unit_intid);
             }
             else {
 
                 console.log('if file is not available yet and the file interval is not yet up carry on')
                 return;
             }
+
+            clearInterval(unit_intid);
         }, 1000);
 
 
