@@ -56,8 +56,4 @@ END=$(date +%s.%2N)
 runtime=$(echo "$END - $START" | bc)
 
 
-echo "*-COMPILEBOX::ENDOFOUTPUT-*" $runtime 
-
-
-
-
+echo "*-COMPILEBOX::ENDOFOUTPUT-*" $runtime

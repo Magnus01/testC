@@ -1,3 +1,4 @@
+
 /*
         *File: DockerSandbox.js
         *Author: Osman Ali Mian/Asad Memon
@@ -8,18 +9,18 @@
 
 
 /**
-         * @Constructor
-         * @variable DockerSandbox
-         * @description This constructor stores all the arguments needed to prepare and execute a Docker Sandbox
-         * @param {Number} timeout_value: The Time_out limit for code execution in Docker
-         * @param {String} path: The current working directory where the current API folder is kept
-         * @param {String} folder: The name of the folder that would be mounted/shared with Docker container, this will be concatenated with path
-         * @param {String} vm_name: The TAG of the Docker VM that we wish to execute
-         * @param {String} compiler_name: The compiler/interpretor to use for carrying out the translation
-         * @param {String} file_name: The file_name to which source code will be written
-         * @param {String} code: The actual code
-         * @param {String} output_command: Used in case of compilers only, to execute the object code, send " " in case of interpretors
-*/
+ * @Constructor
+ * @variable DockerSandbox
+ * @description This constructor stores all the arguments needed to prepare and execute a Docker Sandbox
+ * @param {Number} timeout_value: The Time_out limit for code execution in Docker
+ * @param {String} path: The current working directory where the current API folder is kept
+ * @param {String} folder: The name of the folder that would be mounted/shared with Docker container, this will be concatenated with path
+ * @param {String} vm_name: The TAG of the Docker VM that we wish to execute
+ * @param {String} compiler_name: The compiler/interpretor to use for carrying out the translation
+ * @param {String} file_name: The file_name to which source code will be written
+ * @param {String} code: The actual code
+ * @param {String} output_command: Used in case of compilers only, to execute the object code, send " " in case of interpretors
+ */
 
 var DockerSandbox = function(
     timeout_value,
@@ -55,12 +56,12 @@ var DockerSandbox = function(
 
 
 /**
-         * @function
-         * @name DockerSandbox.run
-         * @description Function that first prepares the Docker environment and then executes the Docker sandbox 
-         * @param {Function pointer} success ?????
-*/
-DockerSandbox.prototype.run = function(success) 
+ * @function
+ * @name DockerSandbox.run
+ * @description Function that first prepares the Docker environment and then executes the Docker sandbox
+ * @param {Function pointer} success ?????
+ */
+DockerSandbox.prototype.run = function(success)
 {
     var sandbox = this;
 
