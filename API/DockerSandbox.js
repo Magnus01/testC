@@ -243,7 +243,14 @@ DockerSandbox.prototype.execute = function(success)
             var hardcodedpath = '/home/ceo/.vnc/testC/API/temp/fa993ec46959b3127c9e/errors_unit';
             unit_myC = unit_myC + 1;
 
-            if (fs.existsSync(realpath)) {
+            function getFilesizeInBytes(filename) {
+                var stats = fs.statSync(filename)
+                var fileSizeInBytes = stats["size"]
+                return fileSizeInBytes
+            }
+
+            console.log(getFilesizeInBytes(realpath), 'filesize');
+            if (fs.existsSync(realpath) && getFilesizeInBytes(realpath) > 100) {
                 fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err, data) {
 
                     //if file is not available yet and the file interval is not yet up carry on
