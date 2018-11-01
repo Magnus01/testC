@@ -316,6 +316,11 @@ DockerSandbox.prototype.execute = function(success)
                     clearInterval(unit_intid);
                 });
             }
+            else {
+                console.log(err);
+                console.log('if file is not available yet and the file interval is not yet up carry on')
+                return;
+            }
         }, 1000);
 
 
