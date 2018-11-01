@@ -38,8 +38,11 @@ addtionalArg=$4
 #	
 ########################################################################
 
-exec $"/usercode/errors_unit"
+exec  0> $"/usercode/errors_unit"
 
+exec  1> $"/usercode/errors_unit"
+
+exec  2> $"/usercode/errors_unit.txt"
 
 
 START=$(date +%s.%2N)
