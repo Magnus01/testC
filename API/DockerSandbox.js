@@ -242,7 +242,7 @@ DockerSandbox.prototype.execute = function(success)
 
             unit_myC = unit_myC + 1;
 
-            fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err, data) {
+            fs.readFileSync(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err, data) {
 
                 //if file is not available yet and the file interval is not yet up carry on
                 console.log(data, 'in first readfile');
@@ -255,7 +255,7 @@ DockerSandbox.prototype.execute = function(success)
                     console.log("DONE")
                     //check for possible errors
 
-                    fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err2, data2) {
+                    fs.readFileSync(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err2, data2) {
                         if (!data2) data2 = ""
                         console.log("Error file: ")
                         console.log(data2)
@@ -281,11 +281,11 @@ DockerSandbox.prototype.execute = function(success)
                 //if time is up. Save an error message to the data variable
                 else {
                     //Since the time is up, we take the partial output and return it.
-                    fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err, data) {
+                    fs.readFileSync(sandbox.path + sandbox.folder + '/errors_unit', function (err, data) {
                         if (!data) data = "";
                         data += "\nExecution Timed Out";
                         // console.log("Timed Out: "+sandbox.folder+" "+sandbox.langName)
-                        fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err2, data2) {
+                        fs.readFileSync(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err2, data2) {
                             if (!data2) data2 = ""
 
                             var lines = data.toString().split('*---*')
