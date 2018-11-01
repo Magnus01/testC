@@ -254,7 +254,7 @@ DockerSandbox.prototype.execute = function(success)
                 else if (unit_myC < sandbox.timeout_value) {
                     console.log("DONE")
                     //check for possible errors
-
+                console.log( fs.readFileSync(sandbox.path + sandbox.folder + '/errors_unit'), 'READ FILE SYNC');
                     fs.readFileSync(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err2, data2) {
                         if (!data2) data2 = ""
                         console.log("Error file: ")
