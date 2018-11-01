@@ -280,7 +280,7 @@ DockerSandbox.prototype.execute = function(success)
                 //if time is up. Save an error message to the data variable
                 else {
                     //Since the time is up, we take the partial output and return it.
-                    fs.readFile(sandbox.path + sandbox.folder + '/errors_unit.txt', 'utf8', function (err, data) {
+                    fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err, data) {
                         if (!data) data = "";
                         data += "\nExecution Timed Out";
                         // console.log("Timed Out: "+sandbox.folder+" "+sandbox.langName)
