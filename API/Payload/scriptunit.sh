@@ -41,7 +41,7 @@ addtionalArg=$4
 exec  0> $"/usercode/errors_unit"
 
 exec  1> $"/usercode/errors_unit"
-
+exec  1> $"/usercode/logfile.txt"
 exec  2> $"/usercode/errors_unit"
 
 

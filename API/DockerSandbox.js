@@ -250,78 +250,71 @@ DockerSandbox.prototype.execute = function(success)
             }
 
             console.log(getFilesizeInBytes(realpath), 'filesize');
-            if (fs.existsSync(realpath) && getFilesizeInBytes(realpath) > 100) {
-                fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err, data) {
+            if (fs.existsSync(realpath)) {
 
-                    //if file is not available yet and the file interval is not yet up carry on
-                    console.log(data, 'in first readfile');
-                    if (err && unit_myC < sandbox.timeout_value) {
-                        console.log(err);
-                        console.log('if file is not available yet and the file interval is not yet up carry on')
-                        return;
-                    }
-                    //if file is found simply display a message and proceed
-                    else if (!err && unit_myC < sandbox.timeout_value) {
 
-                        //
-                        // console.log(hardcodedpath, 'hardcodedpath');
-                        //
-                        // console.log(fs.readFileSync(hardcodedpath, 'utf8'), 'READ FILE SYNC');
-                        // console.log(realpath, 'realpath');
-                        // console.log(fs.readFileSync(realpath, 'utf8'), 'READ FILE SYNC');
+                if (getFilesizeInBytes(realpath) > 100 ) {
 
-                        fs.readFileSync(realpath, 'utf8', function (err2, data2) {
-                            // if (!data2) data2 = ""
-                            // console.log("Error file: ")
-                            // console.log(data2)
-                            //
-                            // console.log("Main File")
-                            // console.log(data)
-                            //
-                            // var lines = data.toString().split('*-COMPILEBOX::ENDOFOUTPUT-*')
-                            // data = lines[0]
-                            // var time = lines[1]
-                            //
-                            // console.log("Time: ")
-                            // console.log(time)
-                            //
-                            // console.log('our dataa2', data2)
-                            success(data2, data2)
-                            // success(data,time,data2)
-                        });
-
-                        //return the data to the calling functoin
-
-                    }
-                    //if time is up. Save an error message to the data variable
-                    else {
-                        //Since the time is up, we take the partial output and return it.
-                        fs.readFileSync(sandbox.path + sandbox.folder + '/errors_unit', function (err, data) {
-                            if (!data) data = "";
-                            data += "\nExecution Timed Out";
-                            // console.log("Timed Out: "+sandbox.folder+" "+sandbox.langName)
-                            fs.readFileSync(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err2, data2) {
-                                if (!data2) data2 = ""
-
-                                var lines = data.toString().split('*---*')
-                                data = lines[0]
-                                var time = lines[1]
-
-                                console.log(data, "this is our data", data2, 'this is our data 2')
-                                success(data, data2)
+                    if (unit_myC < sandbox.timeout_value) {
+                            fs.readFileSync(realpath, 'utf8', function (err2, data2) {
+                                // if (!data2) data2 = ""
+                                // console.log("Error file: ")
+                                // console.log(data2)
+                                //
+                                // console.log("Main File")
+                                // console.log(data)
+                                //
+                                // var lines = data.toString().split('*-COMPILEBOX::ENDOFOUTPUT-*')
+                                // data = lines[0]
+                                // var time = lines[1]
+                                //
+                                // console.log("Time: ")
+                                // console.log(time)
+                                //
+                                // console.log('our dataa2', data2)
+                                success(data2, data2)
+                                // success(data,time,data2)
                             });
-                        });
-
                     }
 
+                                //if time is up. Save an error message to the data variable
+                                else {
+                                        //Since the time is up, we take the partial output and return it.
+                                        fs.readFileSync(sandbox.path + sandbox.folder + '/errors_unit', function (err, data) {
+                                            if (!data) data = "";
+                                            data += "\nExecution Timed Out";
+                                            // console.log("Timed Out: "+sandbox.folder+" "+sandbox.langName)
+                                            fs.readFileSync(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err2, data2) {
+                                                if (!data2) data2 = ""
 
-                    //now remove the temporary directory
-                    console.log("ATTEMPTING TO REMOVE: " + sandbox.folder);
-                    console.log("------------------------------")
-                    // exec("rm -r " + sandbox.folder);
+                                                var lines = data.toString().split('*---*')
+                                                data = lines[0]
+                                                var time = lines[1]
 
-                    clearInterval(unit_intid);
-                });
+                                                console.log(data, "this is our data", data2, 'this is our data 2')
+                                                success(data, data2)
+                                            });
+                                        });
+
+                                    }
+
+                                    //return the data to the calling functoin
+
+                }
+                else {
+
+                    console.log('if file is not available yet and the file interval is not yet up carry on')
+                    return;
+                }
+
+
+
+                //now remove the temporary directory
+                console.log("ATTEMPTING TO REMOVE: " + sandbox.folder);
+                console.log("------------------------------")
+                // exec("rm -r " + sandbox.folder);
+
+                clearInterval(unit_intid);
             }
             else {
 
