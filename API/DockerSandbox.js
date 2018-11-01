@@ -252,9 +252,16 @@ DockerSandbox.prototype.execute = function(success)
                 }
                 //if file is found simply display a message and proceed
                 else if (unit_myC < sandbox.timeout_value) {
-                    console.log(sandbox.path + sandbox.folder + '/errors_unit')
-                    //check for possible errors
-                console.log( fs.readFileSync(sandbox.path + sandbox.folder + '/errors_unit', 'utf8'), 'READ FILE SYNC');
+
+                    var realpath = sandbox.path + sandbox.folder + '/errors_unit';
+                    var hardcodedpath = '/home/ceo/.vnc/testC/API/temp/fa993ec46959b3127c9e/errors_unit';
+
+                  console.log(hardcodedpath, 'hardcodedpath');
+
+                    console.log( fs.readFileSync(hardcodedpath, 'utf8'), 'READ FILE SYNC');
+                    console.log(realpath, 'realpath');
+                    console.log( fs.readFileSync(realpath, 'utf8'), 'READ FILE SYNC');
+
                     fs.readFileSync(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err2, data2) {
                         if (!data2) data2 = ""
                         console.log("Error file: ")
