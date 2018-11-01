@@ -292,7 +292,7 @@ DockerSandbox.prototype.execute = function(success)
                             data = lines[0]
                             var time = lines[1]
 
-                            console.log("this is our data2", data2, 'this is our data 2')
+                            console.log(data, "this is our data", data2, 'this is our data 2')
                             success(data, data2)
                         });
                     });
