@@ -236,13 +236,13 @@ DockerSandbox.prototype.execute = function(success)
     console.log(this.compiler_name, "our compiiler name should be mocha");
 
         // FOR UNIT TEST INTID
-        var unit_intid = setInterval(function () {
+        var unit_intid = setTimeout(function () {
             //Displaying the checking message after 1 second interval, testing purposes only
             //console.log("Checking " + sandbox.path+sandbox.folder + ": for completion: " + myC);
 
             unit_myC = unit_myC + 1;
 
-            fs.readFile(sandbox.path + sandbox.folder + '/errors_unit.txt', 'utf8', function (err, data) {
+            fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err, data) {
 
                 //if file is not available yet and the file interval is not yet up carry on
                 console.log(data, 'in first readfile');
