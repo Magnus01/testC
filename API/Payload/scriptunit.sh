@@ -38,9 +38,7 @@ addtionalArg=$4
 #	
 ########################################################################
 
-exec  1> $"/usercode/errors_unit"
-
-$compiler /usercode/$file $addtionalArg #&> /usercode/errors_unit.txt
+exec $"/usercode/errors_unit"
 
 
 

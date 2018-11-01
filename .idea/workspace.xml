@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8cd49dfa-560e-4cfe-a8b1-958391910d06" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/API/DockerSandbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/DockerSandbox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Payload/scriptunit.sh" beforeDir="false" afterPath="$PROJECT_DIR$/API/Payload/scriptunit.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/compilers.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/compilers.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,20 +23,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DockerSandbox.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DockerSandbox.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/DockerSandbox.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="238" column="35" selection-start-line="238" selection-start-column="35" selection-end-line="238" selection-end-column="35" />
+            <state relative-caret-position="336">
+              <caret line="145" column="48" selection-start-line="145" selection-start-column="40" selection-end-line="145" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scriptunit.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scriptunit.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/Payload/scriptunit.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="46" column="14" lean-forward="true" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
+            <state relative-caret-position="216">
+              <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -48,7 +61,7 @@
       <file leaf-file-name="langs.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/langs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-85">
+            <state relative-caret-position="119">
               <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-end-line="8" />
             </state>
           </provider>
@@ -57,17 +70,8 @@
       <file leaf-file-name="compilers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/compilers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="22" column="58" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/Payload/script.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="30" column="44" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="30" selection-end-column="44" />
+            <state relative-caret-position="230">
+              <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -94,14 +98,21 @@
       <find>myc</find>
       <find>errors_unit</find>
       <find>execute</find>
-      <find>st_unit</find>
-      <find>mocha</find>
       <find>log</find>
+      <find>mocha</find>
+      <find>unit_intid</find>
+      <find>st_unit</find>
+      <find>readFile</find>
+      <find>langName</find>
+      <find>unit_file_name</find>
     </findStrings>
     <replaceStrings>
       <replace>errors_unit</replace>
       <replace>logfile_unit</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>C:\Projects_v2\compilebox\API</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -109,8 +120,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/API/Payload/scriptunit.sh" />
         <option value="$PROJECT_DIR$/API/DockerSandbox.js" />
+        <option value="$PROJECT_DIR$/API/compilers.js" />
+        <option value="$PROJECT_DIR$/API/Payload/scriptunit.sh" />
       </list>
     </option>
   </component>
@@ -329,8 +341,7 @@
             <path>
               <item name="compilebox" type="b2602c69:ProjectViewProjectNode" />
               <item name="compilebox" type="462c0819:PsiDirectoryNode" />
-              <item name="API" type="462c0819:PsiDirectoryNode" />
-              <item name="Payload" type="462c0819:PsiDirectoryNode" />
+              <item name="Setup" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -341,7 +352,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/UI___Learner_Dashboard_Chapter" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
@@ -370,27 +381,28 @@
       <updated>1540488208449</updated>
       <workItem from="1540488209809" duration="615000" />
       <workItem from="1540818193341" duration="717000" />
-      <workItem from="1541076608004" duration="6575000" />
+      <workItem from="1541076608004" duration="8926000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7907000" />
+    <option name="totallyTimeSpent" value="10258000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1076759" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32943678" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1076759" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32943678" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -399,7 +411,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,29 +439,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Setup/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/compilers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="58" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/API/Payload/script.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="30" column="44" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="30" selection-end-column="44" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/DockerTimeout.sh">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/API/package.json">
       <provider selected="true" editor-type-id="text-editor" />
@@ -461,24 +455,51 @@
     <entry file="file://$PROJECT_DIR$/API/testforQ.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/langs.js">
+    <entry file="file://$PROJECT_DIR$/Setup/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/Payload/scriptunit.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="46" column="14" lean-forward="true" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
+        <state relative-caret-position="306">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/API/DockerSandbox.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="238" column="35" selection-start-line="238" selection-start-column="35" selection-end-line="238" selection-end-column="35" />
+        <state relative-caret-position="336">
+          <caret line="145" column="48" selection-start-line="145" selection-start-column="40" selection-end-line="145" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/compilers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/langs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/DockerTimeout.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/Payload/scriptunit.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
         </state>
       </provider>
     </entry>

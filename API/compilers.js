@@ -16,11 +16,12 @@
 	*Revised on: 30th June 2014 (Added Column number 4 to display the name of languages to console)
 */
 
-exports.compilerArray= [ ["python","file.py","","Python","","unit_test.py",],
+exports.compilerArray= [  ["python","file.py","","Python","","unit_test.py",],
 			 ["ruby","file.rb","","Ruby",""],
 			 ["clojure","file.clj","","Clojure",""],
 			 ["php","file.php","","Php",""],
 			 ["mocha","file.js","","Nodejs","", "unit_test.js"],
+
 			 ["scala","file.scala","","Scala",""],
 			 ["\'go run\'","file.go","","Go",""],
 			 ["\'g++ -o /usercode/a.out\' ","file.cpp","/usercode/a.out","C/C++",""],
