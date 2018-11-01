@@ -252,7 +252,7 @@ DockerSandbox.prototype.execute = function(success)
                 }
                 //if file is found simply display a message and proceed
                 else if (unit_myC < sandbox.timeout_value) {
-                    console.log("DONE")
+                    console.log(sandbox.path + sandbox.folder + '/errors_unit')
                     //check for possible errors
                 console.log( fs.readFileSync(sandbox.path + sandbox.folder + '/errors_unit', 'utf8'), 'READ FILE SYNC');
                     fs.readFileSync(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err2, data2) {
