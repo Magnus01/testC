@@ -267,25 +267,25 @@ DockerSandbox.prototype.execute = function(success)
                         // console.log(hardcodedpath, 'hardcodedpath');
                         //
                         // console.log(fs.readFileSync(hardcodedpath, 'utf8'), 'READ FILE SYNC');
-                        console.log(realpath, 'realpath');
-                        console.log(fs.readFileSync(realpath, 'utf8'), 'READ FILE SYNC');
+                        // console.log(realpath, 'realpath');
+                        // console.log(fs.readFileSync(realpath, 'utf8'), 'READ FILE SYNC');
 
                         fs.readFileSync(realpath, 'utf8', function (err2, data2) {
-                            if (!data2) data2 = ""
-                            console.log("Error file: ")
-                            console.log(data2)
-
-                            console.log("Main File")
-                            console.log(data)
-
-                            var lines = data.toString().split('*-COMPILEBOX::ENDOFOUTPUT-*')
-                            data = lines[0]
-                            var time = lines[1]
-
-                            console.log("Time: ")
-                            console.log(time)
-
-                            console.log('our dataa2', data2)
+                            // if (!data2) data2 = ""
+                            // console.log("Error file: ")
+                            // console.log(data2)
+                            //
+                            // console.log("Main File")
+                            // console.log(data)
+                            //
+                            // var lines = data.toString().split('*-COMPILEBOX::ENDOFOUTPUT-*')
+                            // data = lines[0]
+                            // var time = lines[1]
+                            //
+                            // console.log("Time: ")
+                            // console.log(time)
+                            //
+                            // console.log('our dataa2', data2)
                             success(data2)
                             // success(data,time,data2)
                         });
