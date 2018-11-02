@@ -238,8 +238,22 @@ DockerSandbox.prototype.execute = function(success)
 
             //if file is not available yet and the file interval is not yet up carry on
             console.log(data, 'in first readfile');
+            function getFilesizeInBytes(filename) {
+                var stats = fs.statSync(filename)
+                var fileSizeInBytes = stats["size"]
+                return fileSizeInBytes
+            }
+
+            if (!fs.existsSync(realpath)) {
+                console.log( '!fs.existsSync(realpath))');
+                return;
+            }
+            if (!getFilesizeInBytes(realpath) > 100) {
+                console.log( '!getFilesizeInBytes(realpath) > 100');
+                return;
+            }
             if (err && unit_myC < sandbox.timeout_value) {
-                //console.log(err);
+                console.log(err, 'timeout_value');
                 return;
             }
             //if file is found simply display a message and proceed
@@ -252,6 +266,7 @@ DockerSandbox.prototype.execute = function(success)
                 //
                 // console.log( fs.readFileSync(hardcodedpath, 'utf8'), 'READ FILE SYNC');
                 // console.log(realpath, 'realpath');
+
                 console.log( fs.readFileSync(realpath, 'utf8'), 'READ FILE SYNC');
 
                 fs.readFileSync(realpath, 'utf8', function (err2, data2) {
