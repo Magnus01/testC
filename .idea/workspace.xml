@@ -25,8 +25,8 @@
       <file leaf-file-name="DockerSandbox.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/DockerSandbox.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="341" column="30" selection-start-line="341" selection-start-column="30" selection-end-line="341" selection-end-column="30" />
+            <state relative-caret-position="350">
+              <caret line="341" column="33" lean-forward="true" selection-start-line="341" selection-start-column="33" selection-end-line="341" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -121,6 +121,7 @@
       <find>filename</find>
       <find>log</find>
       <find>scriptunit</find>
+      <find>filesize</find>
     </findStrings>
     <replaceStrings>
       <replace>errors_unit</replace>
@@ -410,12 +411,12 @@
       <updated>1540488208449</updated>
       <workItem from="1540488209809" duration="615000" />
       <workItem from="1540818193341" duration="717000" />
-      <workItem from="1541076608004" duration="21525000" />
+      <workItem from="1541076608004" duration="21600000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22857000" />
+    <option name="totallyTimeSpent" value="22932000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -534,8 +535,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API/DockerSandbox.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="341" column="30" selection-start-line="341" selection-start-column="30" selection-end-line="341" selection-end-column="30" />
+        <state relative-caret-position="350">
+          <caret line="341" column="33" lean-forward="true" selection-start-line="341" selection-start-column="33" selection-end-line="341" selection-end-column="33" />
         </state>
       </provider>
     </entry>

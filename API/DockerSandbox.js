@@ -255,7 +255,6 @@ DockerSandbox.prototype.execute = function(success)
                 }
             }
 
-            console.log(getFilesizeInBytes(realpath), 'filesize');
             if (fs.existsSync(realpath) ) {
                 fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err, data) {
                 if (getFilesizeInBytes(realpath) > 100 ) {
@@ -339,7 +338,7 @@ DockerSandbox.prototype.execute = function(success)
             }
             else {
                 clearInterval(unit_intid);
-                exec(st_unit);
+                // exec(st_unit);
                 console.log('if file is not available yet and the file interval is not yet up carry on')
                 return;
             }
