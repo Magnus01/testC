@@ -244,9 +244,15 @@ DockerSandbox.prototype.execute = function(success)
             unit_myC = unit_myC + 1;
 
             function getFilesizeInBytes(filename) {
-                var stats = fs.statSync(filename)
-                var fileSizeInBytes = stats["size"]
-                return fileSizeInBytes
+                if (fs.existsSync(realpath) ) {
+                    var stats = fs.statSync(filename)
+                    var fileSizeInBytes = stats["size"]
+                    return fileSizeInBytes
+                }
+                else {
+                    console.log('if file is not available yet and the file interval is not yet up carry on')
+                    return;
+                }
             }
 
             console.log(getFilesizeInBytes(realpath), 'filesize');
