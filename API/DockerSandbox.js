@@ -257,9 +257,9 @@ DockerSandbox.prototype.execute = function(success)
 
             console.log(getFilesizeInBytes(realpath), 'filesize');
             if (fs.existsSync(realpath) ) {
-
-                if (getFilesizeInBytes(realpath) > 100 ) {
                 fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err, data) {
+                if (getFilesizeInBytes(realpath) > 100 ) {
+
 
                     //if file is not available yet and the file interval is not yet up carry on
                      console.log(data, 'in first readfile');
@@ -269,7 +269,7 @@ DockerSandbox.prototype.execute = function(success)
                         return;
                     }
                     //if file is found simply display a message and proceed
-                    else if (!err && unit_myC < sandbox.timeout_value) {
+                    else if ( unit_myC < sandbox.timeout_value) {
 
                         success(data)
                         //
@@ -330,8 +330,12 @@ DockerSandbox.prototype.execute = function(success)
                     // exec("rm -r " + sandbox.folder);
 
                     clearInterval(unit_intid);
-                });
+
             }
+
+                });
+
+                clearInterval(unit_intid);
             }
             else {
                 clearInterval(unit_intid);
