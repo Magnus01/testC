@@ -256,7 +256,7 @@ DockerSandbox.prototype.execute = function(success)
                 fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err, data) {
 
                     //if file is not available yet and the file interval is not yet up carry on
-                    // console.log(data, 'in first readfile');
+                     console.log(data, 'in first readfile');
                     if (err && unit_myC < sandbox.timeout_value) {
                         console.log(err);
                         console.log('if file is not available yet and the file interval is not yet up carry on')
