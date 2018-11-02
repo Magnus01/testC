@@ -254,18 +254,7 @@ DockerSandbox.prototype.execute = function(success)
         //
         //     return;
         // }
-        console.log(!fs.existsSync('logpathtxt', logpathtxt, 'logpathtxt'));
 
-            if (!fs.existsSync(logpathtxt)) {
-                console.log( '!fs.existsSync(realpath))');
-
-                return;
-            }
-        if (getFilesizeInBytes(logpathtxt) < 100) {
-            console.log( '!getFilesizeInBytes(logpathtxt) > 100');
-
-            return;
-        }
         // FOR UNIT TEST INTID
         var unit_intid = setInterval(function () {
             //Displaying the checking message after 1 second interval, testing purposes only
@@ -274,11 +263,23 @@ DockerSandbox.prototype.execute = function(success)
             unit_myC = unit_myC + 1;
 
 
-            fs.readFile(sandbox.path + sandbox.folder + '/logfile_unit.txt', 'utf8', function (err, data) {
+            fs.readFile(logpathtxt, 'utf8', function (err, data) {
 
                 //if file is not available yet and the file interval is not yet up carry on
                 if (err && unit_myC < sandbox.timeout_value) {
                     //console.log(err);
+                    return;
+                }
+                console.log(!fs.existsSync('logpathtxt', logpathtxt, 'logpathtxt'));
+
+                if (!fs.existsSync(logpathtxt)) {
+                    console.log( '!fs.existsSync(realpath))');
+
+                    return;
+                }
+                if (getFilesizeInBytes(logpathtxt) < 100) {
+                    console.log( '!getFilesizeInBytes(logpathtxt) > 100');
+
                     return;
                 }
                 //if file is found simply display a message and proceed
