@@ -248,12 +248,12 @@ DockerSandbox.prototype.execute = function(success)
 
 
     if (this.compiler_name === "mocha") {
-        console.log(!fs.existsSync('logpath', logpath, 'logpath'));
-        if (getFilesizeInBytes(logpath) < 100) {
-            console.log( '!getFilesizeInBytes(logpath) > 100');
-
-            return;
-        }
+        // console.log(!fs.existsSync('logpath', logpath, 'logpath'));
+        // if (getFilesizeInBytes(logpath) < 100) {
+        //     console.log( '!getFilesizeInBytes(logpath) > 100');
+        //
+        //     return;
+        // }
         console.log(!fs.existsSync('logpathtxt', logpathtxt, 'logpathtxt'));
         if (getFilesizeInBytes(logpathtxt) < 100) {
             console.log( '!getFilesizeInBytes(logpathtxt) > 100');
