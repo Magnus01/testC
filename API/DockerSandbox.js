@@ -303,6 +303,8 @@ DockerSandbox.prototype.execute = function(success)
                         console.log(time)
 
                         console.log('our dataa MOCHA 2', data2)
+                        console.log('ERROR2', err2)
+
                         success(data2)
                         // success(data,time,data2)
                     });
