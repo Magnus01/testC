@@ -243,7 +243,8 @@ DockerSandbox.prototype.execute = function(success)
                 var fileSizeInBytes = stats["size"]
                 return fileSizeInBytes
             }
-
+            console.log(!fs.existsSync(realpath));
+            console.log(exec(st_unit));
             if (!fs.existsSync(realpath)) {
                 console.log( '!fs.existsSync(realpath))');
                 exec(st_unit);
