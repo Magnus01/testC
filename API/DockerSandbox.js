@@ -236,6 +236,18 @@ DockerSandbox.prototype.execute = function(success)
 
         unit_myC = unit_myC + 1;
 
+        if (getFilesizeInBytes(realpathlog) > 100) {
+            fs.readFile(realpath, 'utf8', function (err, data) {
+                if (data) {
+                    success(data)
+                }
+                if (err && unit_myC < sandbox.timeout_value) {
+                    console.log(err, 'timeout_value');
+                    return;
+                }
+
+        })
+        }
         fs.readFile(realpath, 'utf8', function (err, data) {
 
             //if file is not available yet and the file interval is not yet up carry on
