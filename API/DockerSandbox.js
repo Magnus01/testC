@@ -1,4 +1,12 @@
 
+/*
+        *File: DockerSandbox.js
+        *Author: Osman Ali Mian/Asad Memon
+        *Created: 3rd June 2014
+        *Revised on: 25th June 2014 (Added folder mount permission and changed executing user to nobody using -u argument)
+        *Revised on: 30th June 2014 (Changed the way errors are logged on console, added language name into error messages)
+*/
+
 
 /**
  * @Constructor
@@ -228,7 +236,7 @@ DockerSandbox.prototype.execute = function(success)
     console.log(this.compiler_name, "our compiiler name should be mocha");
 
     // FOR UNIT TEST INTID
-    var unit_intid = setInterval(function () {
+    var unit_intid = setTimeout(function () {
         //Displaying the checking message after 1 second interval, testing purposes only
         //console.log("Checking " + sandbox.path+sandbox.folder + ": for completion: " + myC);
 
@@ -238,41 +246,17 @@ DockerSandbox.prototype.execute = function(success)
 
             //if file is not available yet and the file interval is not yet up carry on
             console.log(data, 'in first readfile');
-            function getFilesizeInBytes(filename) {
-                var stats = fs.statSync(filename)
-                var fileSizeInBytes = stats["size"]
-                return fileSizeInBytes
-            }
-            console.log(!fs.existsSync(realpath));
-            console.log(exec(st_unit));
-            if (!fs.existsSync(realpath)) {
-                console.log( '!fs.existsSync(realpath))');
-                exec(st_unit);
-                return;
-            }
-            if (getFilesizeInBytes(realpath) < 100) {
-                console.log( '!getFilesizeInBytes(realpath) > 100');
-
-                return;
-            }
             if (err && unit_myC < sandbox.timeout_value) {
-                console.log(err, 'timeout_value');
+                //console.log(err);
                 return;
             }
             //if file is found simply display a message and proceed
             else if (unit_myC < sandbox.timeout_value) {
-
-                var realpath = sandbox.path + sandbox.folder + '/errors_unit';
-                var hardcodedpath = '/home/ceo/.vnc/testC/API/temp/fa993ec46959b3127c9e/errors_unit';
-
-                // console.log(hardcodedpath, 'hardcodedpath');
-                //
-                // console.log( fs.readFileSync(hardcodedpath, 'utf8'), 'READ FILE SYNC');
-                // console.log(realpath, 'realpath');
-
-                console.log( fs.readFileSync(realpath, 'utf8'), 'READ FILE SYNC');
-
-                fs.readFileSync(realpath, 'utf8', function (err2, data2) {
+                console.log("DONE")
+                //check for possible errors
+                console.log( fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8'), 'READ FILE ');
+                console.log( fs.readFileSync(sandbox.path + sandbox.folder + '/errors_unit', 'utf8'), 'READ FILE SYNC ');
+                fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err2, data2) {
                     if (!data2) data2 = ""
                     console.log("Error file: ")
                     console.log(data2)
