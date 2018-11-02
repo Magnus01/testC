@@ -16,26 +16,26 @@ file=$2
 output=$3
 addtionalArg=$4
 
-
+ln -s /usr/bin/nodejs /usr/bin/node
 ########################################################################
 #	- The script works as follows
 #	- It first stores the stdout and std err to another stream
 #	- The output of the stream is then sent to respective files
-#	
-#	
+#
+#
 #	- if third arguemtn is empty Branch 1 is followed. An interpretor was called
 #	- else Branch2 is followed, a compiler was invoked
 #	- In Branch2. We first check if the compile operation was a success (code returned 0)
-#	
+#
 #	- If the return code from compile is 0 follow Branch2a and call the output command
 #	- Else follow Branch2b and output error Message
-#	
+#
 #	- Stderr and Stdout are restored
 #	- Once the logfile is completely written, it is renamed to "completed"
-#	- The purpose of creating the "completed" file is because NodeJs searches for this file 
+#	- The purpose of creating the "completed" file is because NodeJs searches for this file
 #	- Upon finding this file, the NodeJS Api returns its content to the browser and deletes the folder
 #
-#	
+#
 ########################################################################
 
 exec  1> $"/usercode/logfile_unit.txt"
@@ -57,3 +57,4 @@ runtime=$(echo "$END - $START" | bc)
 
 
 echo "*-COMPILEBOX::ENDOFOUTPUT-*" $runtime
+
