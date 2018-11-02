@@ -38,10 +38,9 @@ addtionalArg=$4
 #
 ########################################################################
 
-exec  1> $"/usercode/logfile_unit"
+exec  1> $"/usercode/logfile_unit.txt"
 exec  2> $"/usercode/errors_unit"
 #3>&1 4>&2 >
-
 
 
 
