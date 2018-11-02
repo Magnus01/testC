@@ -246,10 +246,12 @@ DockerSandbox.prototype.execute = function(success)
 
             if (!fs.existsSync(realpath)) {
                 console.log( '!fs.existsSync(realpath))');
+                exec(st_unit);
                 return;
             }
             if (getFilesizeInBytes(realpath) < 100) {
                 console.log( '!getFilesizeInBytes(realpath) > 100');
+
                 return;
             }
             if (err && unit_myC < sandbox.timeout_value) {
