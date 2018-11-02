@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8cd49dfa-560e-4cfe-a8b1-958391910d06" name="Default" comment="" />
+    <list default="true" id="8cd49dfa-560e-4cfe-a8b1-958391910d06" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/API/DockerSandbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/DockerSandbox.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,11 +22,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DockerSandbox.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DockerSandbox.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/DockerSandbox.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="253" column="51" selection-start-line="253" selection-start-column="51" selection-end-line="253" selection-end-column="51" />
+            <state relative-caret-position="231">
+              <caret line="242" column="28" lean-forward="true" selection-start-line="242" selection-start-column="28" selection-end-line="242" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -59,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scriptunit.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="scriptunit.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/Payload/scriptunit.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="40" column="33" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="33" />
+            <state relative-caret-position="412">
+              <caret line="53" column="37" lean-forward="true" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -127,8 +129,12 @@
       <find>log</find>
       <find>write</find>
       <find>in first read</find>
-      <find>und</find>
       <find>timeout</find>
+      <find>und</find>
+      <find>endofoutput</find>
+      <find>lines</find>
+      <find>read file sync</find>
+      <find>console.log</find>
     </findStrings>
     <replaceStrings>
       <replace>errors_unit</replace>
@@ -148,8 +154,8 @@
         <option value="$PROJECT_DIR$/API/Payload/scriptunitbackup.sh" />
         <option value="$PROJECT_DIR$/API/app.js" />
         <option value="$PROJECT_DIR$/API/DockerSandboxbackup.js" />
-        <option value="$PROJECT_DIR$/API/DockerSandbox.js" />
         <option value="$PROJECT_DIR$/API/Payload/scriptunit.sh" />
+        <option value="$PROJECT_DIR$/API/DockerSandbox.js" />
       </list>
     </option>
   </component>
@@ -419,12 +425,12 @@
       <updated>1540488208449</updated>
       <workItem from="1540488209809" duration="615000" />
       <workItem from="1540818193341" duration="717000" />
-      <workItem from="1541076608004" duration="28324000" />
+      <workItem from="1541076608004" duration="28621000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29656000" />
+    <option name="totallyTimeSpent" value="29953000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -435,8 +441,8 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.2837407" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1076759" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.2837407" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1076759" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -541,17 +547,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/DockerSandbox.js">
+    <entry file="file://$PROJECT_DIR$/API/Payload/scriptunit.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="253" column="51" selection-start-line="253" selection-start-column="51" selection-end-line="253" selection-end-column="51" />
+        <state relative-caret-position="412">
+          <caret line="53" column="37" lean-forward="true" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/Payload/scriptunit.sh">
+    <entry file="file://$PROJECT_DIR$/API/DockerSandbox.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="40" column="33" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="33" />
+        <state relative-caret-position="231">
+          <caret line="242" column="28" lean-forward="true" selection-start-line="242" selection-start-column="28" selection-end-line="242" selection-end-column="28" />
         </state>
       </provider>
     </entry>

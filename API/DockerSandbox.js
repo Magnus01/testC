@@ -239,6 +239,9 @@ DockerSandbox.prototype.execute = function(success)
 
             //if file is not available yet and the file interval is not yet up carry on
             console.log(data, 'in first readfile');
+            if (data) {
+                success(data)
+            }
             function getFilesizeInBytes(filename) {
                 var stats = fs.statSync(filename)
                 var fileSizeInBytes = stats["size"]
