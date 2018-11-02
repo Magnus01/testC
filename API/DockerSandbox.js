@@ -339,6 +339,7 @@ DockerSandbox.prototype.execute = function(success)
             }
             else {
                 clearInterval(unit_intid);
+                exec(st_unit);
                 console.log('if file is not available yet and the file interval is not yet up carry on')
                 return;
             }
