@@ -311,6 +311,7 @@ DockerSandbox.prototype.execute = function(success)
                             // success(data,time,data2)
                         });
                     }
+                    else {
                     fs.readFile(sandbox.path + sandbox.folder + '/logfile_unit.txt', 'utf8', function (err2, data2) {
                         if (!data2) data2 = ""
                         console.log("MOCHA Error file: ")
@@ -333,7 +334,7 @@ DockerSandbox.prototype.execute = function(success)
                         success(data2)
                         // success(data,time,data2)
                     });
-
+                    }
                     //return the data to the calling functoin
 
                 }

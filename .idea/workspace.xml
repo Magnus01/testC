@@ -25,8 +25,8 @@
       <file leaf-file-name="DockerSandbox.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/DockerSandbox.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="309" column="35" selection-start-line="309" selection-start-column="35" selection-end-line="309" selection-end-column="35" />
+            <state relative-caret-position="695">
+              <caret line="336" column="21" selection-start-line="336" selection-start-column="21" selection-end-line="336" selection-end-column="21" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -429,12 +429,12 @@
       <updated>1540488208449</updated>
       <workItem from="1540488209809" duration="615000" />
       <workItem from="1540818193341" duration="717000" />
-      <workItem from="1541076608004" duration="34262000" />
+      <workItem from="1541076608004" duration="34334000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35594000" />
+    <option name="totallyTimeSpent" value="35666000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -560,8 +560,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API/DockerSandbox.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="309" column="35" selection-start-line="309" selection-start-column="35" selection-end-line="309" selection-end-column="35" />
+        <state relative-caret-position="695">
+          <caret line="336" column="21" selection-start-line="336" selection-start-column="21" selection-end-line="336" selection-end-column="21" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
