@@ -277,7 +277,7 @@ DockerSandbox.prototype.execute = function(success)
 
                     return;
                 }
-                if (getFilesizeInBytes(logpathtxt) < 100) {
+                if (getFilesizeInBytes(logpathtxt) < 2) {
                     console.log( '!getFilesizeInBytes(logpathtxt) > 100');
 
                     return;
