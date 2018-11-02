@@ -248,7 +248,7 @@ DockerSandbox.prototype.execute = function(success)
                 console.log( '!fs.existsSync(realpath))');
                 return;
             }
-            if (!getFilesizeInBytes(realpath) > 100) {
+            if (getFilesizeInBytes(realpath) < 100) {
                 console.log( '!getFilesizeInBytes(realpath) > 100');
                 return;
             }
