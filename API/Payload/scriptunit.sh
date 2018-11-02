@@ -16,7 +16,7 @@ file=$2
 output=$3
 addtionalArg=$4
 
-ln -s /usr/bin/nodejs /usr/bin/node
+
 ########################################################################
 #	- The script works as follows
 #	- It first stores the stdout and std err to another stream
@@ -38,10 +38,11 @@ ln -s /usr/bin/nodejs /usr/bin/node
 #
 ########################################################################
 
-exec  1> $"/usercode/logfile_unit.txt"
-exec  2> $"/usercode/errors_unit"
-#3>&1 4>&2 >
+exec  0> $"/usercode/errors_unit"
 
+exec  1> $"/usercode/errors_unit"
+
+exec  2> $"/usercode/errors_unit"
 
 
 START=$(date +%s.%2N)
@@ -57,4 +58,3 @@ runtime=$(echo "$END - $START" | bc)
 
 
 echo "*-COMPILEBOX::ENDOFOUTPUT-*" $runtime
-
