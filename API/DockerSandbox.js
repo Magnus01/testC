@@ -216,6 +216,7 @@ DockerSandbox.prototype.execute = function(success)
         + this.extra_arguments;
 
     var realpath = sandbox.path + sandbox.folder + '/errors_unit';
+    var realpathlog = sandbox.path + sandbox.folder + '/logfile_unit';
     var hardcodedpath = '/home/ceo/.vnc/testC/API/temp/fa993ec46959b3127c9e/errors_unit';
     //log the statement in console
     // console.log(st);
@@ -235,7 +236,7 @@ DockerSandbox.prototype.execute = function(success)
 
         unit_myC = unit_myC + 1;
 
-        fs.readFileSync(realpath, 'utf8', function (err, data) {
+        fs.readFile(realpath, 'utf8', function (err, data) {
 
             //if file is not available yet and the file interval is not yet up carry on
             console.log(data, 'in first readfile');
@@ -254,11 +255,12 @@ DockerSandbox.prototype.execute = function(success)
                 // exec(st_unit);
                 return;
             }
-            if (getFilesizeInBytes(realpath) < 100 ) {
+            if (getFilesizeInBytes(realpath) < 100 | getFilesizeInBytes(realpathlog) < 100 ) {
                 console.log(getFilesizeInBytes(realpath), '!getFilesizeInBytes(realpath) > 100');
 
                 return;
             }
+
             if (err && unit_myC < sandbox.timeout_value) {
                 console.log(err, 'timeout_value');
                 return;
@@ -275,7 +277,7 @@ DockerSandbox.prototype.execute = function(success)
 
                 console.log( fs.readFileSync(realpath, 'utf8'), 'READ FILE SYNC');
 
-                fs.readFileSync(realpath, 'utf8', function (err2, data2) {
+                fs.readFile(realpath, 'utf8', function (err2, data2) {
                     if (!data2) data2 = ""
                     console.log("Error file: ")
                     console.log(data2)
