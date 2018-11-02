@@ -38,11 +38,11 @@ addtionalArg=$4
 #	
 ########################################################################
 
-exec  0> $"/usercode/errors_unit"
-
 exec  1> $"/usercode/errors_unit"
+#3>&1 4>&2 >
 
-exec  2> $"/usercode/errors_unit"
+$compiler /usercode/$file $addtionalArg #&> /usercode/errors_unit.txt
+
 
 
 START=$(date +%s.%2N)
