@@ -251,8 +251,8 @@ DockerSandbox.prototype.execute = function(success)
                 // exec(st_unit);
                 return;
             }
-            if (getFilesizeInBytes(realpath) < 100) {
-                console.log( '!getFilesizeInBytes(realpath) > 100');
+            if (getFilesizeInBytes(realpath) < 1.0) {
+                console.log(getFilesizeInBytes(realpath), '!getFilesizeInBytes(realpath) > 100');
 
                 return;
             }
