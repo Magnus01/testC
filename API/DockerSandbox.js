@@ -287,6 +287,30 @@ DockerSandbox.prototype.execute = function(success)
                     console.log("DONE MOCHA")
                     //check for possible errors
 
+                    if (getFilesizeInBytes(sandbox.path + sandbox.folder + '/errors_unit') > 100) {
+                        fs.readFile(sandbox.path + sandbox.folder + '/errors_unit', 'utf8', function (err2, data2) {
+                            if (!data2) data2 = ""
+                            console.log("MOCHA Error file: ")
+                            console.log(data2)
+
+                            console.log("Main File")
+                            console.log(data)
+
+                            var lines = data.toString().split('*-COMPILEBOX::ENDOFOUTPUT-*')
+                            data = lines[0]
+                            var time = lines[1]
+
+                            console.log("Time: ")
+                            console.log(time)
+
+                            console.log('our dataa MOCHA 2', data2)
+                            console.log('ERROR2', err2)
+
+
+                            success(data2)
+                            // success(data,time,data2)
+                        });
+                    }
                     fs.readFile(sandbox.path + sandbox.folder + '/logfile_unit.txt', 'utf8', function (err2, data2) {
                         if (!data2) data2 = ""
                         console.log("MOCHA Error file: ")
@@ -304,6 +328,7 @@ DockerSandbox.prototype.execute = function(success)
 
                         console.log('our dataa MOCHA 2', data2)
                         console.log('ERROR2', err2)
+
 
                         success(data2)
                         // success(data,time,data2)
