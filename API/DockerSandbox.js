@@ -307,7 +307,7 @@ DockerSandbox.prototype.execute = function(success)
                             console.log('ERROR2', err2)
 
 
-                            success(data2)
+                            return success(data2)
                             // success(data,time,data2)
                         });
                     }
