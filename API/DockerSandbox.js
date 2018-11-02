@@ -255,6 +255,12 @@ DockerSandbox.prototype.execute = function(success)
         //     return;
         // }
         console.log(!fs.existsSync('logpathtxt', logpathtxt, 'logpathtxt'));
+
+            if (!fs.existsSync(logpathtxt)) {
+                console.log( '!fs.existsSync(realpath))');
+
+                return;
+            }
         if (getFilesizeInBytes(logpathtxt) < 100) {
             console.log( '!getFilesizeInBytes(logpathtxt) > 100');
 

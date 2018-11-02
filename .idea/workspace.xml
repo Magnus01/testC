@@ -25,8 +25,8 @@
       <file leaf-file-name="DockerSandbox.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/DockerSandbox.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="255" column="12" lean-forward="true" selection-start-line="250" selection-start-column="3" selection-end-line="255" selection-end-column="12" />
+            <state relative-caret-position="374">
+              <caret line="260" column="13" selection-start-line="260" selection-start-column="13" selection-end-line="260" selection-end-column="13" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -37,8 +37,8 @@
       <file leaf-file-name="DockerSandboxbackup.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/DockerSandboxbackup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="263" lean-forward="true" selection-start-line="263" selection-end-line="265" selection-end-column="101" />
+            <state relative-caret-position="197">
+              <caret line="247" column="11" selection-start-line="247" selection-start-column="11" selection-end-line="251" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -109,7 +109,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mocha</find>
       <find>st_unit</find>
       <find>readFile</find>
       <find>langName</find>
@@ -137,8 +136,9 @@
       <find>und</find>
       <find>sync</find>
       <find>o</find>
-      <find>our dataa</find>
       <find>realpath</find>
+      <find>our dataa</find>
+      <find>exists</find>
     </findStrings>
     <replaceStrings>
       <replace>errors_unit</replace>
@@ -429,12 +429,12 @@
       <updated>1540488208449</updated>
       <workItem from="1540488209809" duration="615000" />
       <workItem from="1540818193341" duration="717000" />
-      <workItem from="1541076608004" duration="33145000" />
+      <workItem from="1541076608004" duration="33336000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34477000" />
+    <option name="totallyTimeSpent" value="34668000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -445,8 +445,8 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.2837407" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1076759" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.2837407" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1076759" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -553,15 +553,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API/DockerSandboxbackup.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="263" lean-forward="true" selection-start-line="263" selection-end-line="265" selection-end-column="101" />
+        <state relative-caret-position="197">
+          <caret line="247" column="11" selection-start-line="247" selection-start-column="11" selection-end-line="251" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/API/DockerSandbox.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="255" column="12" lean-forward="true" selection-start-line="250" selection-start-column="3" selection-end-line="255" selection-end-column="12" />
+        <state relative-caret-position="374">
+          <caret line="260" column="13" selection-start-line="260" selection-start-column="13" selection-end-line="260" selection-end-column="13" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
