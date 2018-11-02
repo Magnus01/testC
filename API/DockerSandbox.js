@@ -232,12 +232,34 @@ DockerSandbox.prototype.execute = function(success)
     console.log("------------------------------")
     //Check For File named "completed" after every 1 second
 
+
+    var logpathtxt = sandbox.path + sandbox.folder + '/logfile_unit.txt';
+    var logpath = sandbox.path + sandbox.folder + '/logfile_unit';
+
+
     console.log(this.compiler_name, "our compiiler name should be mocha");
-    if (this.compiler_name === "mocha")
-    {
-        console.log('this is the truth about mocha')
+
+    function getFilesizeInBytes(filename) {
+        var stats = fs.statSync(filename)
+        var fileSizeInBytes = stats["size"]
+        return fileSizeInBytes
     }
+
+
+
     if (this.compiler_name === "mocha") {
+        console.log(!fs.existsSync('logpath', logpath, 'logpath'));
+        if (getFilesizeInBytes(logpath) < 100) {
+            console.log( '!getFilesizeInBytes(logpath) > 100');
+
+            return;
+        }
+        console.log(!fs.existsSync('logpathtxt', logpathtxt, 'logpathtxt'));
+        if (getFilesizeInBytes(logpathtxt) < 100) {
+            console.log( '!getFilesizeInBytes(logpathtxt) > 100');
+
+            return;
+        }
         // FOR UNIT TEST INTID
         var unit_intid = setInterval(function () {
             //Displaying the checking message after 1 second interval, testing purposes only
