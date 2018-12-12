@@ -50,8 +50,8 @@ app.post('/compile',bruteforce.prevent,function(req, res)
     var language = req.body.language;
 
 
-    var code = req.body.code;
-    var unit_test = req.body.unit_test;
+    var code = req.body.code + '\n' ;
+    var unit_test = '\n' + req.body.unit_test;
 
 
     //ADD ONTO UNIT TEST TO CODE VARABILE
