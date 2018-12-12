@@ -210,12 +210,8 @@ DockerSandbox.prototype.execute = function(success)
 
     // The second field is the path where the file or directory are mounted in the container.
     //this statement is what is executed
-    var st_unit = this.path+'DockerTimeout.sh '
-        + this.timeout_value +
-        's -u mysql -e \'NODE_PATH=/usr/local/lib/node_modules\' -i -t -v  "'
-        + this.path +
-        this.folder + '":/usercode '
-        + this.vm_name +
+    var st_unit = this.path+'DockerTimeout.sh ' + this.timeout_value + 's -i -t -v  "' + this.path + this.folder + '":/usercode '
+    + this.vm_name +
         ' /usercode/scriptunit.sh '
         + this.compiler_name + ' '
         + this.unit_file_name +
