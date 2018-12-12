@@ -133,7 +133,7 @@ DockerSandbox.prototype.prepare = function(success)
             sandbox.path +
             sandbox.folder+"/" +
             sandbox.unit_file_name,
-            sandbox.code+ sandbox.unit_test,
+            sandbox.code+ "\n" + sandbox.unit_test,
             function(err)
             {
                 if (err)
