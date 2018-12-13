@@ -218,7 +218,7 @@ DockerSandbox.prototype.execute = function(success)
     //     ' ' + this.output_command+ ' '
     //     + this.extra_arguments;
 
-    var st_unit = this.path+'DockerTimeout.sh ' + this.timeout_value + 's -u mysql -e \'NODE_PATH=/usr/local/lib/node_modules\' -i -t -v  "' + this.path + this.folder + '":/usercode '
+    var st_unit = this.path+'DockerTimeout.sh ' + this.timeout_value + 's -e \'NODE_PATH=/usr/local/lib/node_modules\' -i -t -v  "' + this.path + this.folder + '":/usercode '
         + this.vm_name +
         ' /usercode/scriptunit.sh '
         + this.compiler_name + ' '
