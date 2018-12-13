@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8cd49dfa-560e-4cfe-a8b1-958391910d06" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/API/DockerSandbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/DockerSandbox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Setup/DockerfileReactJS" beforeDir="false" afterPath="$PROJECT_DIR$/Setup/DockerfileReactJS" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/DockerSandbox.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="220" column="73" selection-start-line="220" selection-start-column="73" selection-end-line="220" selection-end-column="73" />
+            <state relative-caret-position="296">
+              <caret line="226" column="6" lean-forward="true" selection-start-line="226" selection-start-column="6" selection-end-line="226" selection-end-column="6" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -59,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Setup/DockerfileReactJS">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="569">
-              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="195">
+              <caret line="24" column="221" lean-forward="true" selection-start-line="24" selection-start-column="221" selection-end-line="24" selection-end-column="221" />
             </state>
           </provider>
         </entry>
@@ -104,7 +104,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>filesize</find>
       <find>'filesize'</find>
       <find>if file</find>
       <find>log</find>
@@ -134,6 +133,7 @@
       <find>compiler_name</find>
       <find>language</find>
       <find>mh</find>
+      <find>mysql</find>
     </findStrings>
     <replaceStrings>
       <replace>errors_unit</replace>
@@ -156,9 +156,9 @@
         <option value="$PROJECT_DIR$/Setup/Dockerfile" />
         <option value="$PROJECT_DIR$/API/Payload/scriptunit.sh" />
         <option value="$PROJECT_DIR$/Setup/UpdateDocker.sh" />
-        <option value="$PROJECT_DIR$/Setup/DockerfileReactJS" />
         <option value="$PROJECT_DIR$/API/app.js" />
         <option value="$PROJECT_DIR$/API/DockerSandbox.js" />
+        <option value="$PROJECT_DIR$/Setup/DockerfileReactJS" />
       </list>
     </option>
   </component>
@@ -243,12 +243,12 @@
       <workItem from="1541076608004" duration="34334000" />
       <workItem from="1544473926519" duration="671000" />
       <workItem from="1544621882116" duration="2367000" />
-      <workItem from="1544698966226" duration="5519000" />
+      <workItem from="1544698966226" duration="6072000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44223000" />
+    <option name="totallyTimeSpent" value="44776000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -367,13 +367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Setup/DockerfileReactJS">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/API/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -386,11 +379,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API/DockerSandbox.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="220" column="73" selection-start-line="220" selection-start-column="73" selection-end-line="220" selection-end-column="73" />
+        <state relative-caret-position="296">
+          <caret line="226" column="6" lean-forward="true" selection-start-line="226" selection-start-column="6" selection-end-line="226" selection-end-column="6" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Setup/DockerfileReactJS">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="24" column="221" lean-forward="true" selection-start-line="24" selection-start-column="221" selection-end-line="24" selection-end-column="221" />
         </state>
       </provider>
     </entry>

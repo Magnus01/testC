@@ -20,7 +20,7 @@ exports.compilerArray= [  ["python","file.py","","Python","","unit_test.py",],
 			 ["ruby","file.rb","","Ruby",""],
 			 ["clojure","file.clj","","Clojure",""],
 			 ["php","file.php","","Php",""],
-			 ["mocha","file.js","","Nodejs","", "unit_test.js"],
+			 ["jest","file.js","","Nodejs","", "unit_test.js"],
 
 			 ["scala","file.scala","","Scala",""],
 			 ["\'go run\'","file.go","","Go",""],
