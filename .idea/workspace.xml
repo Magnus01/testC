@@ -15,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/DockerSandbox.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="229" column="28" selection-start-line="229" selection-start-column="28" selection-end-line="229" selection-end-column="28" />
+            <state relative-caret-position="396">
+              <caret line="221" column="3" selection-start-line="220" selection-start-column="3" selection-end-line="221" selection-end-column="3" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -104,7 +104,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sandbox.path +</find>
       <find>unit_intid</find>
       <find>__dirname</find>
       <find>filename</find>
@@ -134,6 +133,7 @@
       <find>var st_unit</find>
       <find>language</find>
       <find>st_unit</find>
+      <find>docker run</find>
     </findStrings>
     <replaceStrings>
       <replace>errors_unit</replace>
@@ -141,6 +141,7 @@
     </replaceStrings>
     <dirStrings>
       <dir>C:\Projects_v2\compilebox\API</dir>
+      <dir>C:\projects\testC\API</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -242,18 +243,18 @@
       <workItem from="1541076608004" duration="34334000" />
       <workItem from="1544473926519" duration="671000" />
       <workItem from="1544621882116" duration="2367000" />
-      <workItem from="1544698966226" duration="2418000" />
+      <workItem from="1544698966226" duration="2727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41122000" />
+    <option name="totallyTimeSpent" value="41431000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1108742" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1380597" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -385,8 +386,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API/DockerSandbox.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="229" column="28" selection-start-line="229" selection-start-column="28" selection-end-line="229" selection-end-column="28" />
+        <state relative-caret-position="396">
+          <caret line="221" column="3" selection-start-line="220" selection-start-column="3" selection-end-line="221" selection-end-column="3" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
