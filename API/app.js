@@ -45,7 +45,7 @@ app.post('/compile',function(req, res)
     var language = req.body.language;
 
     var virtualmachineVar = "python"
-    if (language = 1)  {
+    if (language = 4)  {
         virtualmachineVar = "javascript"
     }
     var code = req.body.code + '\n' ;
