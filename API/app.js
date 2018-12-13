@@ -46,7 +46,7 @@ app.post('/compile',function(req, res)
 
     var virtualmachineVar = "python"
     if (language === 4)  {
-        virtualmachineVar = "javascript"
+        virtualmachineVar = "davidjeddy/docker_puppeteer_jest"
     }
     else {language === 0}
     var code = req.body.code + '\n' ;
