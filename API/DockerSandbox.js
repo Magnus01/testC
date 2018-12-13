@@ -319,9 +319,9 @@ module.exports = DockerSandbox;
     //execute the Docker, This is done ASYNCHRONOUSLY
     // exec(st);
     exec(st_unit);
-    var executionvar = exec(st_unit);
+    // var executionvar = exec(st_unit);
     console.log("------------------------------")
-    console.log(executionvar)
+    // console.log(executionvar)
     //Check For File named "completed" after every 1 second
 
 
@@ -537,9 +537,7 @@ module.exports = DockerSandbox;
             });
         }, 1000);
 
-    }
-
-};
+    };
 
 
 module.exports = DockerSandbox;
