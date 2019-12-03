@@ -49,14 +49,14 @@ RUN apt-get update \
   software-properties-common \
   python-setuptools
 
-# Music libraries
-RUN apt-get install -y libasound-dev \
-   portaudio19-dev \
-   libportaudio2 \
-   libportaudiocpp0 \
-   ffmpeg \
-   libav-tools \
-   libavcodec-extra
+# # Music libraries
+# RUN apt-get install -y libasound-dev \
+#    portaudio19-dev \
+#    libportaudio2 \
+#    libportaudiocpp0 \
+#    ffmpeg \
+#    libav-tools \
+#    libavcodec-extra
 
 #####################################################################
 # Install Anaconda (python 2.7 version)
