@@ -38,13 +38,13 @@ RUN apt-get update
 
 RUN apt-get install -y gobjc
 RUN apt-get install -y gnustep-devel &&  sed -i 's/#define BASE_NATIVE_OBJC_EXCEPTIONS     1/#define BASE_NATIVE_OBJC_EXCEPTIONS     0/g' /usr/include/GNUstep/GNUstepBase/GSConfig.h
-RUN apt-get install -y scala
-RUN apt-get install -y mysql-server
-RUN apt-get install -y perl
-RUN apt-get install -y curl
+#RUN apt-get install -y scala
+#RUN apt-get install -y mysql-server
+#RUN apt-get install -y perl
+#RUN apt-get install -y curl
 #RUN mkdir -p /opt/rust && \
 #    curl https://sh.rustup.rs -sSf | HOME=/opt/rust sh -s -- --no-modify-path -y && \
 #    chmod -R 777 /opt/rust
 #RUN apt-get install -y sudo
 RUN apt-get install -y bc
-RUN echo "mysql ALL = NOPASSWD: /usr/sbin/service mysql start" | cat >> /etc/sudoers
+#RUN echo "mysql ALL = NOPASSWD: /usr/sbin/service mysql start" | cat >> /etc/sudoers
