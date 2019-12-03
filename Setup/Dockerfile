@@ -99,39 +99,11 @@ RUN conda config --append channels conda-forge
 RUN conda config --append channels mutirri
 RUN conda config --append channels auto
 
-RUN conda install -c conda-forge ffmpeg
-RUN conda install -c auto pydub=0.9.0
-RUN conda install -c conda-forge librosa
-RUN conda install -c mutirri pyaudio=0.2.7
+
 
 # Some machine learning tools
 RUN conda update scikit-learn
-RUN conda update conda
 
-RUN pip install xgboost
-
-#####################################################################
-# Install CPU version of Tensor Flow
-#####################################################################
-
-# Install TensorFlow CPU version from central repo. Python 2.7 version
-RUN pip --no-cache-dir install \
-    https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.1.0-cp27-none-linux_x86_64.whl
-
-# TensorBoard
-EXPOSE 6006
-# IPython
-EXPOSE 8888
-
-# Get samples
-WORKDIR /home/workspace/samples/libROSA
-RUN wget https://raw.githubusercontent.com/scienceguyrob/Docker/master/Images/music/samples/libROSA/sample.m4a
-RUN wget https://raw.githubusercontent.com/scienceguyrob/Docker/master/Images/music/samples/libROSA/LibROSA_Demo.ipynb
-
-WORKDIR /home/workspace/samples/TensorFlow
-RUN wget https://raw.githubusercontent.com/scienceguyrob/Docker/master/Images/music/samples/TensorFlow/1_hello_tensorflow.ipynb
-RUN wget https://raw.githubusercontent.com/scienceguyrob/Docker/master/Images/music/samples/TensorFlow/2_hello_tensorflow.ipynb
-RUN wget https://raw.githubusercontent.com/scienceguyrob/Docker/master/Images/music/samples/TensorFlow/3_hello_tensorflow.ipynb
 
 
 #####################################################################
